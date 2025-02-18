@@ -18,9 +18,9 @@ function LandingPageA() {
   }
 
   const features = [
-    "A no-obligation demo tailored to your credit union's needs",
-    "A live look at Euriqa's AI-powered automation for compliance and document management",
-    "An opportunity to ask questions and explore how AI can save your credit union time, reduce risks, and improve operational efficiency"
+    "A no-obligation consultation about our referral partner program",
+    "A detailed overview of our generous commission structure - up to 10% for 6 months",
+    "An opportunity to discuss how you can turn your network into a revenue stream with minimal effort"
   ]
 
   const states = [
@@ -40,8 +40,8 @@ function LandingPageA() {
       <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <img 
-            src="https://ik.imagekit.io/buildable/Euriqa_AI_Logo_Transparent.png?updatedAt=1739249111622" 
-            alt="Euriqa AI" 
+            src="https://ik.imagekit.io/buildable/Buildable-portrait-color-sq@0.5x.png?updatedAt=1739864048603" 
+            alt="Buildable" 
             className="h-24"
           />
         </div>
@@ -58,7 +58,7 @@ function LandingPageA() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl font-bold text-gray-900 mb-6"
               >
-                See What Euriqa AI Can Do for Your Credit Union...
+                Turn Your Network into Income with Buildable's Partner Program
               </motion.h1>
               
               <motion.p 
@@ -67,7 +67,7 @@ function LandingPageA() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-gray-600 mb-8"
               >
-                And why Euriqa AI is the leading AI-powered compliance and document automation tool for credit unions. Book a demo and see how it can streamline compliance, automate document management, and improve member service.
+                Ready to earn substantial commissions without the heavy lifting? Our referral program rewards connectors who introduce quality software projects to our team, with payouts of up to 10% for six months on successfully landed projects.
               </motion.p>
 
               <motion.div 
@@ -97,10 +97,10 @@ function LandingPageA() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="bg-[#022D41] rounded-lg p-8 text-white shadow-xl"
+                className="bg-[#2d1b4d] rounded-lg p-8 text-white shadow-xl"
               >
                 <div className="mb-6">
-                  <h2 className="text-2xl font-semibold mb-2">Request a Euriqa AI Enterprise Demo</h2>
+                  <h2 className="text-2xl font-semibold mb-2">Request Program Details</h2>
                   <p className="text-sm opacity-80">Step 1 of 2</p>
                 </div>
 
@@ -160,9 +160,9 @@ function LandingPageA() {
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value })}
                       >
-                        <option value="" className="bg-[#022D41]">Select...</option>
+                        <option value="" className="bg-[#2d1b4d]">Select...</option>
                         {states.map((state) => (
-                          <option key={state} value={state} className="bg-[#022D41]">{state}</option>
+                          <option key={state} value={state} className="bg-[#2d1b4d]">{state}</option>
                         ))}
                       </select>
                       <ChevronDownIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white pointer-events-none" />
@@ -181,11 +181,11 @@ function LandingPageA() {
                         value={formData.helpType}
                         onChange={(e) => setFormData({ ...formData, helpType: e.target.value })}
                       >
-                        <option value="" className="bg-[#022D41]">Select...</option>
-                        <option value="compliance" className="bg-[#022D41]">Compliance Automation</option>
-                        <option value="document" className="bg-[#022D41]">Document Synchronization</option>
-                        <option value="service" className="bg-[#022D41]">AI-Powered Member Service</option>
-                        <option value="all" className="bg-[#022D41]">All of the Above</option>
+                        <option value="" className="bg-[#2d1b4d]">Select...</option>
+                        <option value="referral" className="bg-[#2d1b4d]">I want to refer clients</option>
+                        <option value="learn" className="bg-[#2d1b4d]">Learn more about the program</option>
+                        <option value="partner" className="bg-[#2d1b4d]">Become a referral partner</option>
+                        <option value="other" className="bg-[#2d1b4d]">Other</option>
                       </select>
                       <ChevronDownIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white pointer-events-none" />
                     </div>
@@ -193,7 +193,7 @@ function LandingPageA() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#00B2E3] text-white py-3 px-6 rounded-md font-medium hover:bg-[#00A0D1] transition-colors duration-200 shadow-sm hover:shadow-md"
+                    className="w-full bg-[#4945FF] text-white py-3 px-6 rounded-md font-medium hover:bg-[#4945FF]/90 transition-colors duration-200 shadow-sm hover:shadow-md"
                   >
                     Next Step
                   </button>
@@ -212,22 +212,8 @@ function LandingPageA() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              The world's leading credit unions trust Euriqa AI to keep them compliant and efficient
+              The world's leading credit unions trust Buildable to keep them compliant and efficient
             </h2>
-          </motion.div>
-
-          {/* Logo Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="flex justify-center mb-16"
-          >
-            <img
-              src="https://ik.imagekit.io/buildable/Credit%20Union%20Hero%20Image%20(2).png?updatedAt=1739567624357"
-              alt="Forrit Credit Union"
-              className="h-48 object-contain"
-            />
           </motion.div>
 
           {/* Testimonial */}
@@ -245,12 +231,12 @@ function LandingPageA() {
               ))}
             </div>
             <p className="text-gray-700 mb-6 text-lg italic">
-              "Before implementing Euriqa, our team spent countless hours sifting through outdated manuals to find the right policies. Now, with Euriqa's intuitive platform, accessing the latest procedures is instantaneous, boosting our efficiency and morale."
+              "Partnering with Buildable has been a game-changer for my consulting business. Their team handles all the technical delivery while I focus on what I do best - building relationships. The commission structure is generous, and their support team is always there when I need them."
             </p>
             <div className="flex items-center">
               <div>
-                <p className="font-semibold text-gray-900">John Delano</p>
-                <p className="text-gray-600">Compliance Officer, Forrit</p>
+                <p className="font-semibold text-gray-900">Sarah Chen</p>
+                <p className="text-gray-600">Principal Consultant, Digital Transformation Partners</p>
               </div>
             </div>
           </motion.div>

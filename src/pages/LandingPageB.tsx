@@ -135,32 +135,61 @@ function LandingPageB() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1f36] to-[#2d3352] p-12 group"
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1f36] to-[#2d3352] p-8 group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <h3 className="text-3xl font-semibold text-white mb-8">The Buildable Advantage</h3>
-                <ul className="space-y-4 text-white">
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Generous Commission Structure –</span>
-                    <span>Earn up to 10% of monthly invoices for six months</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Zero Technical Requirements –</span>
-                    <span>Just make the introduction, we handle everything else</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Transparent Tracking –</span>
-                    <span>Clear reporting on project status and commission calculations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Professional Support –</span>
-                    <span>Dedicated partner manager ensures smooth handoffs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Oregon-Based Development –</span>
-                    <span>Clients work directly with our US-based engineering team</span>
-                  </li>
-                </ul>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 h-full">
+                <h3 className="text-4xl font-bold text-white mb-8">The Buildable Advantage</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">💰</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Generous Commission Structure</h4>
+                      <p className="text-white/80 text-lg">Earn up to 10% of monthly invoices for six months</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">🎯</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Zero Technical Requirements</h4>
+                      <p className="text-white/80 text-lg">Just make the introduction, we handle everything else</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">📊</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Transparent Tracking</h4>
+                      <p className="text-white/80 text-lg">Clear reporting on project status and commission calculations</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">👥</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Professional Support</h4>
+                      <p className="text-white/80 text-lg">Dedicated partner manager ensures smooth handoffs</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">🏢</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Oregon-Based Development</h4>
+                      <p className="text-white/80 text-lg">Clients work directly with our US-based engineering team</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
@@ -169,32 +198,53 @@ function LandingPageB() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-12 group"
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-8 group"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <h3 className="text-3xl font-semibold text-white mb-8">How It Works</h3>
-                <ul className="space-y-4 text-white mb-8">
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Partner Registration –</span>
-                    <span>Complete our quick application process</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Make Introductions –</span>
-                    <span>Connect us with businesses needing software solutions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">Earn Commissions –</span>
-                    <span>Receive payments when projects launch and bills are paid</span>
-                  </li>
-                </ul>
-                <blockquote className="border-l-4 border-white/30 pl-4 mt-8">
-                  <p className="text-white/90 italic">
-                    "The commission structure is substantial and straightforward. I earned over $12,000 from a single introduction last quarter, with minimal time investment."
-                  </p>
-                  <footer className="mt-2 text-white/70">
-                    – Michael T., Marketing Consultant
-                  </footer>
-                </blockquote>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 h-full flex flex-col">
+                <h3 className="text-4xl font-bold text-white mb-12">How It Works</h3>
+                
+                <div className="space-y-8 mb-12">
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-white/20 text-white font-bold text-xl">
+                      1
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Partner Registration</h4>
+                      <p className="text-white/80 text-lg">Complete our quick application process</p>
+                    </div>
+                  </div>
+
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-white/20 text-white font-bold text-xl">
+                      2
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Make Introductions</h4>
+                      <p className="text-white/80 text-lg">Connect us with businesses needing software solutions</p>
+                    </div>
+                  </div>
+
+                  <div className="relative pl-16">
+                    <div className="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-white/20 text-white font-bold text-xl">
+                      3
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2">Earn Commissions</h4>
+                      <p className="text-white/80 text-lg">Receive payments when projects launch and bills are paid</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-auto">
+                  <blockquote className="relative p-6 bg-white/5 rounded-xl border-l-4 border-white/30">
+                    <p className="text-white/90 text-lg italic leading-relaxed mb-4">
+                      "The commission structure is substantial and straightforward. I earned over $12,000 from a single introduction last quarter, with minimal time investment."
+                    </p>
+                    <footer className="text-white/70">
+                      – Michael T., Marketing Consultant
+                    </footer>
+                  </blockquote>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -213,12 +263,12 @@ function LandingPageB() {
               <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-green-200 to-transparent"></div>
               <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Simple</h3>
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-light">15</span>
-                <span className="text-2xl">min</span>
+                <span className="text-6xl font-light">3</span>
+                <span className="text-2xl">steps</span>
                 <span className="text-gray-400 ml-2">®</span>
               </div>
               <p className="text-gray-600 text-lg">
-                Send a first reply in less than an hour, become a power user in a day.
+                Our streamlined referral process requires minimal effort from partners
               </p>
             </motion.div>
 
@@ -231,12 +281,11 @@ function LandingPageB() {
               <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-purple-200 to-transparent"></div>
               <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Powerful</h3>
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-light">56</span>
-                <span className="text-2xl">%</span>
+                <span className="text-6xl font-light">$27K</span>
                 <span className="text-gray-400 ml-2">↗</span>
               </div>
               <p className="text-gray-600 text-lg">
-                Respond to 56% more customer messages in the first year.
+                Average commission earned by our top referral partners in 2024
               </p>
             </motion.div>
 
@@ -249,12 +298,12 @@ function LandingPageB() {
               <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-blue-200 to-transparent"></div>
               <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Personal</h3>
               <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-light">25</span>
+                <span className="text-6xl font-light">89</span>
                 <span className="text-2xl">%</span>
                 <span className="text-gray-400 ml-2">☺</span>
               </div>
               <p className="text-gray-600 text-lg">
-                Our customers' CSAT scores are 25% higher than the industry average.
+                Of referral partners have made multiple successful introductions
               </p>
             </motion.div>
           </div>
@@ -288,9 +337,9 @@ function LandingPageB() {
             <div className="w-1/3">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-pink-400 to-orange-500 flex items-center justify-center p-8">
                 <img 
-                  src="https://ik.imagekit.io/buildable/Credit%20Union%20Hero%20Image%20(2).png?updatedAt=1739567624357" 
-                  alt="Forrit Logo" 
-                  className="w-full h-full object-contain"
+                  src="https://ik.imagekit.io/buildable/AI%20Brand%20Agent%20Profile%20Image%20(4).png?updatedAt=1739872336229" 
+                  alt="Sarah Chen" 
+                  className="w-full h-full object-cover rounded-xl"
                 />
               </div>
             </div>
@@ -332,41 +381,55 @@ function LandingPageB() {
             </h2>
           </div>
 
-          {/* Content Reveal Section */}
-          <div className="relative max-w-3xl mx-auto mb-16 mt-32">
-            <div className={`relative overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[2000px]' : 'max-h-[300px]'}`}>
-              <p className="text-xl text-gray-600 mb-8">
-                Ready to transform your professional network into a revenue stream? Join Buildable's Partner Program and start earning substantial commissions for connecting us with businesses that need custom software solutions.
-              </p>
+          {/* Content Section - Redesigned */}
+          <div className="relative max-w-4xl mx-auto mb-16 mt-32 rounded-3xl overflow-hidden">
+            <div className="bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-6">Transform Your Network</h3>
+                  <p className="text-xl text-white/90 leading-relaxed">
+                    Ready to transform your professional network into a revenue stream? Join Buildable's Partner Program and start earning substantial commissions for connecting us with businesses that need custom software solutions.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-6">Perfect For</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-xl">👔</span>
+                      </div>
+                      <span className="text-xl text-white/90">Business Consultants</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-xl">🏢</span>
+                      </div>
+                      <span className="text-xl text-white/90">Agency Owners</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-xl">💡</span>
+                      </div>
+                      <span className="text-xl text-white/90">Industry Experts</span>
+                    </li>
+                    <li className="flex items-center space-x-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-xl">🤝</span>
+                      </div>
+                      <span className="text-xl text-white/90">Professional Service Providers</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               
-              <p className="text-xl text-gray-600 mb-8">
-                Our program is perfect for:
-              </p>
-              
-              <ul className="list-disc pl-8 mb-8 text-xl text-gray-600 space-y-4">
-                <li>Business Consultants</li>
-                <li>Agency Owners</li>
-                <li>Industry Experts</li>
-                <li>Professional Service Providers</li>
-              </ul>
-              
-              <p className="leading-relaxed text-xl text-gray-600">
-                Don't let valuable opportunities slip away. Partner with Buildable and turn your connections into commissions while ensuring your network gets access to world-class software development services.
-              </p>
+              <div className="mt-12 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+                <p className="text-xl text-white/90 leading-relaxed">
+                  Don't let valuable opportunities slip away. Partner with Buildable and turn your connections into commissions while ensuring your network gets access to world-class software development services.
+                </p>
+              </div>
             </div>
-            {!isExpanded && (
-              <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white via-white/90 to-transparent"></div>
-            )}
           </div>
-          
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="relative -bottom-6 mx-auto flex items-center justify-center w-14 h-14 rounded-full bg-[#4945FF] shadow-lg hover:bg-[#4945FF]/90 transition-all duration-200 group"
-          >
-            <ChevronDownIcon 
-              className={`w-7 h-7 text-white transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
-            />
-          </button>
 
           {/* GET STARTED Section */}
           <BackgroundBeamsWithCollision className="w-screen relative -mx-4 sm:-mx-6 lg:-mx-8 -mb-32">
@@ -376,7 +439,7 @@ function LandingPageB() {
               </h2>
               <div className="flex justify-center">
                 <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-medium hover:bg-[#4945FF]/90 transition-colors">
-                  Get a Demo
+                  Request Program Details
                 </button>
               </div>
             </div>
