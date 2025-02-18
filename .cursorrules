@@ -1,0 +1,53 @@
+# Cursor Agent Instructions
+
+## Project Context
+We are creating a high-converting landing page for the Buildable Referral Program. The page’s primary goal is to capture leads by encouraging potential referral partners to request more information, rather than providing every detail of the program upfront.
+
+## Requirements & Guidelines
+
+1. **Teaser Content vs. Full Details**  
+   - The landing page should **tease** the referral program’s key benefits (e.g., “Earn up to 10% commissions”) but not disclose every specific term.  
+   - Instead, visitors should be prompted to **fill out a contact form** or “Request More Info” before receiving the full program details.
+
+2. **Page Sections**  
+   - **Hero Section**  
+     - Headline emphasizing the referral opportunity and high-level benefit (e.g., “Earn Up to 10% Commission”).  
+     - Subheading briefly explains the partnership concept.  
+     - Clear CTA button: “Request More Info” or “Get More Details.”  
+   - **Key Value Proposition / Intro Paragraph**  
+     - Summarize why someone would want to become a referral partner.  
+     - Mention the high-level commission (up to 10% for six months) and the potential for ongoing revenue.  
+   - **Benefits / Highlights**  
+     - Present 3–5 concise bullet points explaining the advantages of partnering with Buildable (simple process, transparent payouts, dedicated support, etc.).  
+   - **How It Works (High-Level)**  
+     - Outline the steps: (1) Sign Up, (2) Refer Leads, (3) Earn Commission.  
+     - Keep the explanation brief; emphasize that more details come after they reach out.  
+   - **Teaser CTA Section**  
+     - “Ready to Boost Your Income?” or a similar attention-grabbing line.  
+     - Reiterate the main CTA to “Request More Info.”  
+   - **(Optional) Testimonials / Social Proof**  
+     - Short success story from an existing partner, if available.  
+   - **FAQs**  
+     - Provide a few short Q&As about how commissions are paid, what kinds of leads qualify, etc.  
+     - Emphasize that the complete details will be shared upon contact.  
+   - **Final CTA & Contact Form**  
+     - Encourage the visitor to complete the form.  
+     - Form fields: Name, Email, Company, brief description of their network, etc.  
+
+3. **Tone & Style**  
+   - **Friendly, yet professional**.  
+   - **Conversion-focused**: Make it clear the best next step is to fill out the form.  
+   - Keep the language succinct, scannable, and action-oriented.
+
+4. **Technical Instructions**  
+   - **File Structure**: Place the final landing page file (e.g., `ReferralLandingPage.jsx` or `index.html`) in the appropriate directory.  
+   - **Styling**: Ensure consistent brand styling (colors, fonts) matching Buildable’s brand.  
+   - **Form Handling**: The CTA should link to (or embed) a contact form that captures visitor information.  
+   - **Future Edits**: The copy can be refined for SEO or further design changes, but must preserve the “teaser first, full details upon contact” principle.
+
+5. **Do Not**  
+   - Reveal the entire commission breakdown, monthly revenue structure, or program contract details on this page.  
+   - Make the visitor scroll too long; keep sections concise and easy to navigate.  
+
+## Goal Recap
+The end result should be a landing page that entices potential partners with the promise of “up to 10% commissions” and the flexibility of the referral program—while driving them to fill out the contact form to learn more.

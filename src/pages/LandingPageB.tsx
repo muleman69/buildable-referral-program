@@ -26,42 +26,42 @@ function LandingPageB() {
 
   const features = [
     {
-      icon: "🔍",
-      title: "Instant Policy Retrieval",
-      description: "Get answers to compliance and operational questions in seconds."
+      icon: "💰",
+      title: "Lucrative Commissions",
+      description: "Earn up to 10% commission on successfully landed projects for six months."
     },
     {
-      icon: "🏦",
-      title: "Collaborative Knowledge Sharing",
-      description: "Securely share policies and best practices across your credit union."
+      icon: "🤝",
+      title: "Simple Process",
+      description: "Just introduce us to potential clients - we handle all the heavy lifting."
     },
     {
-      icon: "📑",
-      title: "Audit-Ready Documentation",
-      description: "Stay compliant with AI-generated reports and audit trails."
+      icon: "📊",
+      title: "Transparent Tracking",
+      description: "Monitor your referrals and earnings through our easy-to-use dashboard."
     },
     {
-      icon: "🤖",
-      title: "AI-Powered Vendor Management",
-      description: "Easily track, score, and manage vendors with real-time AI insights."
+      icon: "🌟",
+      title: "Dedicated Support",
+      description: "Get personalized assistance and resources to help you succeed."
     }
   ]
 
   const stats = [
     {
-      value: "90%",
-      label: "Faster Policy Retrieval",
-      description: "Employees find the right info instantly."
+      value: "10%",
+      label: "Commission Rate",
+      description: "Earn up to 10% on referred projects."
     },
     {
-      value: "AI",
-      label: "AI-Powered Document Search",
-      description: "AI auto-tags and organizes policies."
+      value: "6",
+      label: "Months of Earnings",
+      description: "Get paid for 6 months after project start."
     },
     {
       value: "24/7",
-      label: "Always Up-to-Date Regulations",
-      description: "Compliance updates are seamless."
+      label: "Partner Support",
+      description: "Access to our dedicated partner team."
     }
   ]
 
@@ -69,27 +69,27 @@ function LandingPageB() {
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-[100]">
-        <div className="max-w-[1800px] mx-auto px-8 py-4 bg-white/80 backdrop-blur-sm">
+        <div className="max-w-[1800px] mx-auto px-8 py-2 bg-white/80 backdrop-blur-sm">
           <div className="flex items-center justify-between">
             <img 
-              src="https://ik.imagekit.io/buildable/Euriqa_AI_Logo_Transparent.png?updatedAt=1739249111622" 
-              alt="Euriqa AI" 
-              className="h-24"
+              src="https://ik.imagekit.io/buildable/Buildable-portrait-color-sq@0.5x.png?updatedAt=1739864048603" 
+              alt="Buildable" 
+              className="h-36"
             />
             <Button 
               size="lg" 
               className="bg-[#4945FF] hover:bg-[#4945FF]/90 text-white px-8 py-2 text-base font-medium"
             >
-              Get a Demo
+              Request Program Details
             </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <BackgroundBeamsWithCollision className="min-h-screen pt-96 bg-white relative z-[1]">
+      <BackgroundBeamsWithCollision className="min-h-screen pt-72 bg-white relative z-[1]">
         <div className="container relative z-[2] mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center gap-16">
+          <div className="flex flex-col items-center gap-12 mt-36">
             {/* Hero Text */}
             <div className="flex flex-col justify-center space-y-8 text-center max-w-5xl mx-auto">
               <div className="space-y-6">
@@ -97,33 +97,22 @@ function LandingPageB() {
                   className="animate-appear [animation-delay:0.3s] [animation-fill-mode:backwards] mx-auto text-white"
                   variant="secondary"
                 >
-                  Introducing Euriqa
+                  Buildable Referral Program
                 </Badge>
                 <h1 className="text-[84px] leading-[1.1] font-extrabold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative">
-                  The future of credit union operations is{" "}
-                  <span className="relative inline-block">
-                    here
-                    <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 100 12" preserveAspectRatio="none">
-                      <path 
-                        d="M0,3 C15,3 15,9 30,9 C45,9 45,3 60,3 C75,3 75,9 90,9 L100,9" 
-                        stroke="url(#gradient)" 
-                        strokeWidth="4" 
-                        fill="none"
-                        className="path"
-                      />
-                      <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#9333EA" />
-                          <stop offset="50%" stopColor="#EC4899" />
-                          <stop offset="100%" stopColor="#F97316" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </span>
+                  Turn Your Network into Income with Buildable's Partner Program
                 </h1>
                 <p className="max-w-[800px] text-gray-600 text-xl animate-appear [animation-delay:0.5s] [animation-fill-mode:backwards] mx-auto">
-                  Empower your team with AI-driven insights while maintaining complete control. Cut response times by 56% and boost member satisfaction.
+                  Ready to earn substantial commissions without the heavy lifting? Our referral program rewards connectors who introduce quality software projects to our team, with payouts of up to 10% for six months on successfully landed projects.
                 </p>
+              </div>
+              <div className="flex justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-[#4945FF] hover:bg-[#4945FF]/90 text-white px-8 py-4 text-lg font-medium"
+                >
+                  REQUEST PROGRAM DETAILS
+                </Button>
               </div>
             </div>
 
@@ -132,7 +121,7 @@ function LandingPageB() {
               <img
                 alt="Hero"
                 className="w-full h-auto object-cover rounded-lg"
-                src="https://ik.imagekit.io/buildable/Credit%20Union%20Hero%20Image%20(5).png?updatedAt=1739740312526"
+                src="https://ik.imagekit.io/buildable/Credit%20Union%20Hero%20Image%20(6).png?updatedAt=1739869859389"
               />
             </div>
           </div>
@@ -147,13 +136,16 @@ function LandingPageB() {
           className="text-center max-w-3xl mx-auto mb-32"
         >
           <h2 className="text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            AI-powered operations with a human touch
+            Why Partner With Buildable?
           </h2>
           <p className="text-xl text-gray-600 mb-10">
-            Euriqa streamlines internal operations, reduces response times, and ensures compliance—all while keeping your team in control.
+            Do you regularly encounter businesses needing custom software, system integrations, or digital transformation expertise? Instead of passing these opportunities by, turn them into a lucrative income stream.
+          </p>
+          <p className="text-xl text-gray-600 mb-10">
+            Our referral program is designed for consultants, agency owners, and industry insiders who regularly connect with businesses requiring sophisticated software solutions.
           </p>
           <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md font-medium hover:bg-[#4945FF]/90 transition-colors text-lg">
-            Get a Demo
+            Request Program Details
           </button>
         </motion.div>
 
@@ -270,10 +262,10 @@ function LandingPageB() {
             className="text-center mt-32 mb-16"
           >
             <p className="text-xl text-gray-600 mb-6">
-              The best way to get to know Euriqa is to start a free trial.
+              Ready to start earning commissions? Join our partner program today.
             </p>
             <a href="#" className="text-blue-600 text-lg font-medium hover:text-blue-700 inline-flex items-center">
-              Get a sneak peek
+              Learn more about the program
               <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
@@ -303,14 +295,14 @@ function LandingPageB() {
             <div className="w-2/3">
               <blockquote>
                 <p className="text-3xl font-light text-gray-900 mb-8 leading-relaxed">
-                  "Before implementing Euriqa, our team spent countless hours sifting through outdated manuals to find the right policies. Now, with Euriqa's intuitive platform, accessing the latest procedures is instantaneous, boosting our efficiency and morale."
+                  "Partnering with Buildable has been a game-changer for my consulting business. Their team handles all the technical delivery while I focus on what I do best - building relationships. The commission structure is generous, and their support team is always there when I need them."
                 </p>
                 <footer>
                   <div className="flex items-center">
                     <div>
-                      <div className="text-lg font-semibold text-gray-900">John Delano</div>
-                      <div className="text-gray-600">Compliance Officer</div>
-                      <div className="text-gray-600">Forrit Credit Union</div>
+                      <div className="text-lg font-semibold text-gray-900">Sarah Chen</div>
+                      <div className="text-gray-600">Principal Consultant</div>
+                      <div className="text-gray-600">Digital Transformation Partners</div>
                     </div>
                   </div>
                 </footer>
@@ -329,63 +321,55 @@ function LandingPageB() {
         >
           <div className="relative inline-block">
             <h2 className="text-[96px] leading-[1.1] font-extrabold text-[#1a1f36] tracking-tight mb-8">
-              AI-powered efficiency.
+              Your Network.
               <br />
-              Human oversight.
+              Our Expertise.
               <br />
-              Full compliance<span className="relative inline-block">.</span>
+              Shared Success<span className="relative inline-block">.</span>
             </h2>
           </div>
 
           {/* Content Reveal Section */}
           <div className="relative max-w-3xl mx-auto mb-16 mt-32">
             <div className={`relative overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[2000px]' : 'max-h-[300px]'}`}>
-              <div className="text-left space-y-10 text-xl text-gray-600">
-                <p className="text-3xl font-light leading-relaxed">
-                  AI may be transforming financial services, but our founding belief remains unchanged: Great member service is essential for credit union success.
-                </p>
-                <p className="leading-relaxed">
-                  Delivering exceptional member service means putting your team and members first. That's why Euriqa will never be just "AI-first." We're invested in AI tools that enhance the member experience by helping credit union teams work more efficiently and serve members better.
-                </p>
-                <p className="font-medium text-gray-900 text-2xl">
-                  AI isn't a magic solution for credit union operations.
-                </p>
-                <p className="leading-relaxed">
-                  Despite the headlines about AI replacing human workers, your credit union staff are more vital than ever to your institution's success. We build tools that empower your team to do their best work, which means more than just adding AI capabilities.
-                </p>
-                <p className="leading-relaxed">
-                  It means ensuring your team never misses an opportunity to provide that personal touch when members need it most. Completely automating these human connections may reduce costs initially, but it will impact member relationships and loyalty over time.
-                </p>
-                <p className="font-medium text-gray-900 text-2xl">
-                  The credit union difference is timeless.
-                </p>
-                <p className="leading-relaxed">
-                  We're not caught up in the AI hype cycle. We're more committed than ever to supporting credit unions and their teams in maintaining the personal relationships that make credit unions special.
-                </p>
-                <p className="leading-relaxed">
-                  In an era of rapid technological change, it's crucial to work with a partner who understands and values the credit union difference. We believe in enhancing—not replacing—the human connections that make credit unions unique. If you believe in preserving these relationships while embracing innovation, you've found the right partner.
-                </p>
-              </div>
-              {!isExpanded && (
-                <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white via-white/90 to-transparent"></div>
-              )}
+              <p className="text-xl text-gray-600 mb-8">
+                Ready to transform your professional network into a revenue stream? Join Buildable's Partner Program and start earning substantial commissions for connecting us with businesses that need custom software solutions.
+              </p>
+              
+              <p className="text-xl text-gray-600 mb-8">
+                Our program is perfect for:
+              </p>
+              
+              <ul className="list-disc pl-8 mb-8 text-xl text-gray-600 space-y-4">
+                <li>Business Consultants</li>
+                <li>Agency Owners</li>
+                <li>Industry Experts</li>
+                <li>Professional Service Providers</li>
+              </ul>
+              
+              <p className="leading-relaxed text-xl text-gray-600">
+                Don't let valuable opportunities slip away. Partner with Buildable and turn your connections into commissions while ensuring your network gets access to world-class software development services.
+              </p>
             </div>
-            
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="relative -bottom-6 mx-auto flex items-center justify-center w-14 h-14 rounded-full bg-[#4945FF] shadow-lg hover:bg-[#4945FF]/90 transition-all duration-200 group"
-            >
-              <ChevronDownIcon 
-                className={`w-7 h-7 text-white transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
-              />
-            </button>
+            {!isExpanded && (
+              <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white via-white/90 to-transparent"></div>
+            )}
           </div>
+          
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="relative -bottom-6 mx-auto flex items-center justify-center w-14 h-14 rounded-full bg-[#4945FF] shadow-lg hover:bg-[#4945FF]/90 transition-all duration-200 group"
+          >
+            <ChevronDownIcon 
+              className={`w-7 h-7 text-white transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+            />
+          </button>
 
           {/* GET STARTED Section */}
           <BackgroundBeamsWithCollision className="w-screen relative -mx-4 sm:-mx-6 lg:-mx-8 -mb-32">
             <div className="relative z-20 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8">
-                See how Euriqa can transform your credit union's efficiency today.
+                Start earning with Buildable's Partner Program today.
               </h2>
               <div className="flex justify-center">
                 <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-medium hover:bg-[#4945FF]/90 transition-colors">
@@ -443,7 +427,7 @@ function LandingPageB() {
               </a>
             </div>
             <div className="flex items-center">
-              <span className="text-gray-400">© 2025 Euriqa</span>
+              <span className="text-gray-400">© 2024 Buildable</span>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 {
-  "name": "euriqa-landing-page",
+  "name": "buildable-referral-program",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
-    "@heroicons/react": "^2.1.1",
+    "@heroicons/react": "^2.0.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.0.3",
+    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.29.0",
