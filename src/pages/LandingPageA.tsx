@@ -42,7 +42,7 @@ function LandingPageA() {
           <img 
             src="https://ik.imagekit.io/buildable/Buildable-portrait-color-sq@0.5x.png?updatedAt=1739864048603" 
             alt="Buildable" 
-            className="h-24"
+            className="h-36"
           />
         </div>
       </header>
