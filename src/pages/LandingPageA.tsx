@@ -18,9 +18,9 @@ function LandingPageA() {
   }
 
   const features = [
-    "A no-obligation consultation about our referral partner program",
-    "A detailed overview of our generous commission structure - up to 10% for 6 months",
-    "An opportunity to discuss how you can turn your network into a revenue stream with minimal effort"
+    "A personal walkthrough of our referral structure and qualification criteria",
+    "Transparent commission details showing how you can earn up to 10% on six months of client invoices",
+    "Strategies for identifying high-value referral opportunities within your existing network"
   ]
 
   const states = [
@@ -58,7 +58,7 @@ function LandingPageA() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl font-bold text-gray-900 mb-6"
               >
-                Turn Your Network into Income with Buildable's Partner Program
+                Transform Your Connections into Recurring Revenue
               </motion.h1>
               
               <motion.p 
@@ -67,7 +67,7 @@ function LandingPageA() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-gray-600 mb-8"
               >
-                Ready to earn substantial commissions without the heavy lifting? Our referral program rewards connectors who introduce quality software projects to our team, with payouts of up to 10% for six months on successfully landed projects.
+                Earn significant commissions with minimal effort. Our premium referral program rewards your introductions with up to 10% commission for six months—no technical expertise required.
               </motion.p>
 
               <motion.div 
@@ -76,7 +76,7 @@ function LandingPageA() {
                 transition={{ delay: 0.4 }}
                 className="space-y-6"
               >
-                <h2 className="text-xl font-semibold mb-4">What can I expect?</h2>
+                <h2 className="text-xl font-semibold mb-4">Your Partnership Benefits</h2>
                 <ul className="space-y-4">
                   {features.map((feature, index) => (
                     <li key={index} className="flex items-start">
@@ -87,7 +87,7 @@ function LandingPageA() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-sm text-gray-500 mt-6">No credit card required—just a free, personalized consultation.</p>
+                <p className="text-sm text-gray-500 mt-6">Zero commitment or upfront costs—just profitable partnership opportunities.</p>
               </motion.div>
             </div>
 
@@ -182,10 +182,11 @@ function LandingPageA() {
                         onChange={(e) => setFormData({ ...formData, helpType: e.target.value })}
                       >
                         <option value="" className="bg-[#2d1b4d]">Select...</option>
-                        <option value="referral" className="bg-[#2d1b4d]">I want to refer clients</option>
-                        <option value="learn" className="bg-[#2d1b4d]">Learn more about the program</option>
-                        <option value="partner" className="bg-[#2d1b4d]">Become a referral partner</option>
-                        <option value="other" className="bg-[#2d1b4d]">Other</option>
+                        <option value="compensation" className="bg-[#2d1b4d]">Learn about the referral program compensation</option>
+                        <option value="clients" className="bg-[#2d1b4d]">Discuss potential clients in my network</option>
+                        <option value="process" className="bg-[#2d1b4d]">Understand the referral process</option>
+                        <option value="partnership" className="bg-[#2d1b4d]">Explore partnership opportunities</option>
+                        <option value="other" className="bg-[#2d1b4d]">Other (please specify)</option>
                       </select>
                       <ChevronDownIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white pointer-events-none" />
                     </div>
@@ -212,7 +213,7 @@ function LandingPageA() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              The world's leading credit unions trust Buildable to keep them compliant and efficient
+              Industry leaders trust Buildable's expertise—your referrals are in capable hands
             </h2>
           </motion.div>
 
