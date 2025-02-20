@@ -18,9 +18,9 @@ function LandingPageA() {
   }
 
   const features = [
-    "A personal walkthrough of our referral structure and qualification criteria",
-    "Transparent commission details showing how you can earn up to 10% on six months of client invoices",
-    "Strategies for identifying high-value referral opportunities within your existing network"
+    "10% recurring commissions for six months on every project you refer. The bigger the project, the more you earn.",
+    "You bring the connection; we handle scoping, development, and delivery. No technical skills needed.",
+    "Track referred projects and commissions 24/7 through your partner dashboard. No guesswork, just clarity."
   ]
 
   const states = [
@@ -58,7 +58,7 @@ function LandingPageA() {
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl font-bold text-gray-900 mb-6"
               >
-                Transform Your Connections into Recurring Revenue
+                Turn Connections into Cash with Buildable's Referral Program
               </motion.h1>
               
               <motion.p 
@@ -67,7 +67,7 @@ function LandingPageA() {
                 transition={{ delay: 0.2 }}
                 className="text-lg text-gray-600 mb-8"
               >
-                Earn significant commissions with minimal effort. Our premium referral program rewards your introductions with up to 10% commission for six months—no technical expertise required.
+                Introduce businesses to Buildable's custom software solutions, and earn up to 10% of monthly invoices for six months — no technical expertise or project management required. Just connect, and we handle the rest.
               </motion.p>
 
               <motion.div 
@@ -76,7 +76,7 @@ function LandingPageA() {
                 transition={{ delay: 0.4 }}
                 className="space-y-6"
               >
-                <h2 className="text-xl font-semibold mb-4">Your Partnership Benefits</h2>
+                <h2 className="text-xl font-semibold mb-4">The Buildable Advantage</h2>
                 <ul className="space-y-4">
                   {features.map((feature, index) => (
                     <li key={index} className="flex items-start">
@@ -87,7 +87,7 @@ function LandingPageA() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-sm text-gray-500 mt-6">Zero commitment or upfront costs—just profitable partnership opportunities.</p>
+                <p className="text-sm text-gray-500 mt-6">Stop leaving money on the table. Your network is worth more than LinkedIn connections.</p>
               </motion.div>
             </div>
 
@@ -196,7 +196,7 @@ function LandingPageA() {
                     type="submit"
                     className="w-full bg-[#4945FF] text-white py-3 px-6 rounded-md font-medium hover:bg-[#4945FF]/90 transition-colors duration-200 shadow-sm hover:shadow-md"
                   >
-                    Next Step
+                    Request Program Details
                   </button>
                 </form>
               </motion.div>
@@ -204,20 +204,63 @@ function LandingPageA() {
           </div>
         </div>
 
-        {/* Trust Section */}
+        {/* Stats Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Industry leaders trust Buildable's expertise—your referrals are in capable hands
-            </h2>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-left relative"
+            >
+              <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-green-200 to-transparent"></div>
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Simple Process</h3>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-6xl font-light">3</span>
+                <span className="text-2xl">Steps</span>
+              </div>
+              <p className="text-gray-600 text-lg">
+                Refer, relax, and earn — our system is designed for your convenience.
+              </p>
+            </motion.div>
 
-          {/* Testimonial */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-left relative"
+            >
+              <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-purple-200 to-transparent"></div>
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Powerful Earnings</h3>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-6xl font-light">$27K</span>
+                <span className="text-gray-400 ml-2">↗</span>
+              </div>
+              <p className="text-gray-600 text-lg">
+                Top partners earn life-changing income by referring just 2-3 projects yearly.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-left relative"
+            >
+              <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-blue-200 to-transparent"></div>
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Proven Results</h3>
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-6xl font-light">89</span>
+                <span className="text-2xl">%</span>
+              </div>
+              <p className="text-gray-600 text-lg">
+                Partners keep coming back because the program works.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Testimonial */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -237,13 +280,13 @@ function LandingPageA() {
             <div className="w-2/3">
               <blockquote>
                 <p className="text-3xl font-light text-gray-900 mb-8 leading-relaxed">
-                  "Partnering with Buildable has been a game-changer for my consulting business. Their team handles all the technical delivery while I focus on what I do best - building relationships. The commission structure is generous, and their support team is always there when I need them."
+                  "Buildable turned my network into a revenue engine. Their team delivers tailored software solutions, so I've built a deeper trust with my existing clients and earn commissions. In 2024 alone, I earned $83,000 — all while focusing on my core business."
                 </p>
                 <footer>
                   <div className="flex items-center">
                     <div>
                       <div className="text-lg font-semibold text-gray-900">Sarah Chen</div>
-                      <div className="text-gray-600">Principal Consultant</div>
+                      <div className="text-gray-600">Industry Consultant</div>
                       <div className="text-gray-600">Digital Transformation Partners</div>
                     </div>
                   </div>
@@ -252,7 +295,57 @@ function LandingPageA() {
             </div>
           </motion.div>
         </div>
+
+        {/* Audience Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-gray-50">
+          <h2 className="text-3xl font-bold text-center mb-12">Ideal For Visionaries Who Connect:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Consultants</h3>
+              <p>Monetize your client relationships without added workload.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Agency Owners</h3>
+              <p>Offer software development as a white-label service.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Industry Leaders</h3>
+              <p>Capitalize on your niche network.</p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Advisors</h3>
+              <p>Turn your recommendations into revenue.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Final CTA */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h2 className="text-4xl font-bold mb-6">Stop Leaving Money on the Table</h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Your network is worth more than LinkedIn connections. Partner with Buildable to unlock its full financial potential — while delivering elite software solutions to your contacts.
+          </p>
+          <button className="bg-[#4945FF] text-white py-4 px-8 rounded-md font-medium hover:bg-[#4945FF]/90 transition-colors duration-200 text-lg">
+            Start Earning with Buildable's Partner Program Today
+          </button>
+        </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            <div className="flex space-x-6">
+              <a href="#" className="text-gray-600 hover:text-gray-900">Terms & Privacy</a>
+              <a href="#" className="text-gray-600 hover:text-gray-900">Accessibility</a>
+              <a href="#" className="text-gray-600 hover:text-gray-900">Do Not Sell</a>
+            </div>
+            <div className="text-gray-600">
+              © 2025 Buildable
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

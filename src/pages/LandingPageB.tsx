@@ -87,7 +87,7 @@ function LandingPageB() {
       </header>
 
       {/* Hero Section */}
-      <BackgroundBeamsWithCollision className="min-h-screen pt-48 bg-white relative z-[1]">
+      <div className="min-h-screen pt-48 bg-white relative z-[1]">
         <div className="absolute inset-0 z-0">
           <img
             alt="Hero Background"
@@ -124,7 +124,7 @@ function LandingPageB() {
             </div>
           </div>
         </div>
-      </BackgroundBeamsWithCollision>
+      </div>
 
       {/* Features Section */}
       <section className="py-24">
