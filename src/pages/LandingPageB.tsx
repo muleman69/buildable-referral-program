@@ -27,41 +27,36 @@ function LandingPageB() {
   const features = [
     {
       icon: "💰",
-      title: "Lucrative Commissions",
-      description: "Earn up to 10% commission on successfully landed projects for six months."
+      title: "Lucrative, Long-Term Earnings",
+      description: "10% recurring commissions for six months on every project you refer. The bigger the project, the more you earn."
     },
     {
       icon: "🤝",
-      title: "Simple Process",
-      description: "Just introduce us to potential clients - we handle all the heavy lifting."
+      title: "Zero Effort, Maximum Impact",
+      description: "You bring the connection; we handle scoping, development, and delivery. No technical skills needed."
     },
     {
       icon: "📊",
-      title: "Transparent Tracking",
-      description: "Monitor your referrals and earnings through our easy-to-use dashboard."
-    },
-    {
-      icon: "🌟",
-      title: "Dedicated Support",
-      description: "Get personalized assistance and resources to help you succeed."
+      title: "Real-Time Transparency",
+      description: "Track referred projects and commissions 24/7 through your partner dashboard. No guesswork, just clarity."
     }
   ]
 
   const stats = [
     {
-      value: "10%",
-      label: "Commission Rate",
-      description: "Earn up to 10% on referred projects."
+      value: "3",
+      label: "Simple Process",
+      description: "Refer, relax, and earn — our system is designed for your convenience."
     },
     {
-      value: "6",
-      label: "Months of Earnings",
-      description: "Get paid for 6 months after project start."
+      value: "$27K",
+      label: "Powerful Earnings",
+      description: "Top partners earn life-changing income by referring just 2-3 projects yearly."
     },
     {
-      value: "24/7",
-      label: "Partner Support",
-      description: "Access to our dedicated partner team."
+      value: "89%",
+      label: "Proven Results",
+      description: "Partners keep coming back because the program works."
     }
   ]
 
@@ -107,10 +102,10 @@ function LandingPageB() {
                   Buildable Referral Program
                 </Badge>
                 <h1 className="text-[84px] leading-[1.1] font-extrabold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative">
-                  Turn Your Network into Income with Buildable's Partner Program
+                  Turn Connections into Cash with Buildable's Referral Program
                 </h1>
                 <p className="max-w-[800px] text-gray-600 text-xl animate-appear [animation-delay:0.5s] [animation-fill-mode:backwards] mx-auto">
-                  Ready to earn substantial commissions without the heavy lifting? Our referral program rewards connectors who introduce quality software projects to our team, with payouts of up to 10% for six months on successfully landed projects.
+                  Introduce businesses to Buildable's custom software solutions, and earn up to 10% of monthly invoices for six months — no technical expertise or project management required. Just connect, and we handle the rest.
                 </p>
               </div>
               <div className="flex justify-center">
@@ -238,10 +233,10 @@ function LandingPageB() {
                 <div className="mt-auto">
                   <blockquote className="relative p-6 bg-white/5 rounded-xl border-l-4 border-white/30">
                     <p className="text-white/90 text-lg italic leading-relaxed mb-4">
-                      "The commission structure is substantial and straightforward. I earned over $12,000 from a single introduction last quarter, with minimal time investment."
+                      "Buildable's program is a no-brainer. One introduction turned into a $28,000 commission in just three months — the team is professional, and great to work with."
                     </p>
                     <footer className="text-white/70">
-                      – Michael T., Marketing Consultant
+                      – Michael T., Industry Consultant & Buildable Partner Since 2023
                     </footer>
                   </blockquote>
                 </div>
