@@ -377,49 +377,49 @@ function LandingPageB() {
           </div>
 
           {/* Final CTA Section */}
-          <div className="relative max-w-4xl mx-auto mb-16 mt-32 rounded-3xl overflow-hidden">
-            <div className="bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="relative max-w-5xl mx-auto mb-16 mt-32 rounded-3xl overflow-hidden">
+            <div className="bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-6">Transform Your Network</h3>
-                  <p className="text-xl text-white/90 leading-relaxed">
+                  <h3 className="text-4xl font-bold text-white mb-8">Transform Your Network</h3>
+                  <p className="text-2xl text-white/90 leading-relaxed">
                     Ready to transform your professional network into a revenue stream? Join Buildable's Partner Program and start earning substantial commissions for connecting us with businesses that need custom software solutions.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-6">Perfect For</h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-center space-x-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-xl">👔</span>
+                  <h3 className="text-4xl font-bold text-white mb-8">Perfect For</h3>
+                  <ul className="space-y-6">
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">👔</span>
                       </div>
-                      <span className="text-xl text-white/90">Business Consultants</span>
+                      <span className="text-2xl text-white/90">Business Consultants</span>
                     </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-xl">🏢</span>
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">🏢</span>
                       </div>
-                      <span className="text-xl text-white/90">Agency Owners</span>
+                      <span className="text-2xl text-white/90">Agency Owners</span>
                     </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-xl">💡</span>
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">💡</span>
                       </div>
-                      <span className="text-xl text-white/90">Industry Experts</span>
+                      <span className="text-2xl text-white/90">Industry Experts</span>
                     </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-xl">🤝</span>
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">🤝</span>
                       </div>
-                      <span className="text-xl text-white/90">Professional Service Providers</span>
+                      <span className="text-2xl text-white/90">Professional Service Providers</span>
                     </li>
                   </ul>
                 </div>
               </div>
               
-              <div className="mt-12 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-                <p className="text-xl text-white/90 leading-relaxed">
+              <div className="mt-16 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+                <p className="text-2xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto">
                   Don't let valuable opportunities slip away. Partner with Buildable and turn your connections into commissions while ensuring your network gets access to world-class software development services.
                 </p>
               </div>
