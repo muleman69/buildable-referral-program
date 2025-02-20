@@ -376,7 +376,7 @@ function LandingPageB() {
             </h2>
           </div>
 
-          {/* Content Section - Redesigned */}
+          {/* Final CTA Section */}
           <div className="relative max-w-4xl mx-auto mb-16 mt-32 rounded-3xl overflow-hidden">
             <div className="bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -427,18 +427,16 @@ function LandingPageB() {
           </div>
 
           {/* GET STARTED Section */}
-          <BackgroundBeamsWithCollision className="w-screen relative -mx-4 sm:-mx-6 lg:-mx-8 -mb-32">
-            <div className="relative z-20 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8">
-                Start earning with Buildable's Partner Program today.
-              </h2>
-              <div className="flex justify-center">
-                <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-medium hover:bg-[#4945FF]/90 transition-colors">
-                  Request Program Details
-                </button>
-              </div>
+          <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8">
+              Start earning with Buildable's Partner Program today.
+            </h2>
+            <div className="flex justify-center">
+              <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-medium hover:bg-[#4945FF]/90 transition-colors">
+                Request Program Details
+              </button>
             </div>
-          </BackgroundBeamsWithCollision>
+          </div>
         </motion.div>
       </section>
 
