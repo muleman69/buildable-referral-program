@@ -499,21 +499,6 @@ const EarningsCalculator = () => {
           <p className="text-center text-sm mt-2 font-['Lato']">6+ Referrals</p>
         </div>
       </div>
-      
-      {/* CTA Button */}
-      <div className="mt-10 text-center">
-        <button 
-          className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg hover:bg-[#4945FF]/90 transition-colors font-medium font-['Lato'] transform hover:-translate-y-1 active:translate-y-0 duration-200 shadow-md"
-          onClick={() => {
-            const contactSection = document.getElementById('get-started');
-            if (contactSection) {
-              contactSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-        >
-          REQUEST PROGRAM DETAILS
-        </button>
-      </div>
     </div>
   );
 }
