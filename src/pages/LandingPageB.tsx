@@ -519,29 +519,12 @@ function LandingPageB() {
                         }}
                       />
                       
-                      {/* Elegant caption overlay */}
-                      <div className="absolute bottom-4 right-4 bg-gradient-to-r from-[#2d1b4d]/90 to-[#4945FF]/90 rounded-lg px-4 py-3 max-w-[60%] backdrop-blur-sm flex items-center space-x-3 shadow-lg">
-                        <span className="text-white text-xl">🚀</span>
-                        <p className="text-white text-sm font-medium font-['Raleway']">
+                      {/* Updated subtle caption overlay */}
+                      <div className="absolute bottom-4 right-4 bg-white/70 backdrop-blur-sm rounded-lg px-4 py-2 max-w-[60%] border border-[#4945FF]/20 shadow-sm">
+                        <p className="text-[#4945FF] text-sm font-medium font-['Raleway']">
                           Advocates Drive Growth
                         </p>
                       </div>
-                      
-                      {/* Subtle decoration elements */}
-                      <div className="absolute top-4 left-4">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" stroke="white" strokeWidth="2" opacity="0.5"/>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Subtle decorative element that reinforces the network theme */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-gradient-to-br from-[#4945FF]/10 to-[#2d1b4d]/10 backdrop-blur-sm flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4945FF] to-[#2d1b4d] flex items-center justify-center shadow-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                      </svg>
                     </div>
                   </div>
                 </div>
