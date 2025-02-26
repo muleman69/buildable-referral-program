@@ -490,27 +490,59 @@ function LandingPageB() {
                   <p className="text-xl leading-relaxed text-gray-700 font-['Lato'] font-normal mb-6">
                     Beyond referrals, we're building a network of advocates who champion Buildable. As a partner, you'll join an exclusive community, gain recognition, and access unique opportunities to grow your influence and earnings.
                   </p>
-                  <div className="bg-gradient-to-r from-[#2d1b4d]/80 to-[#4945FF]/80 p-4 rounded-lg">
-                    <p className="text-white text-lg font-['Lato'] italic text-center">
-                      "Advocates Drive Growth"
-                    </p>
+                  
+                  {/* Modern visual element that replaces the old purple box */}
+                  <div className="flex items-center space-x-4 mt-8">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4945FF] to-[#2d1b4d] flex items-center justify-center shadow-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="h-2 bg-gradient-to-r from-[#4945FF] to-[#2d1b4d] rounded-full"></div>
+                      <p className="text-[#4945FF] font-semibold mt-2 font-['Lato']">Join our exclusive network today</p>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="relative">
-                  <div className="aspect-square rounded-xl overflow-hidden bg-white shadow-lg">
-                    <img 
-                      src="https://ik.imagekit.io/buildable/network-professionals.jpg?updatedAt=1739872336229" 
-                      alt="Networked Professionals" 
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80";
-                      }}
-                    />
+                  {/* Updated image container with new aspect ratio */}
+                  <div className="rounded-xl overflow-hidden bg-white shadow-lg" style={{ aspectRatio: '4/3' }}>
+                    <div className="relative w-full h-full">
+                      {/* New image with proper error handling */}
+                      <img 
+                        src="https://ik.imagekit.io/buildable/Buildable_Advocates.png?updatedAt=1740600881590" 
+                        alt="Buildable Advocates Network" 
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80";
+                        }}
+                      />
+                      
+                      {/* Elegant caption overlay */}
+                      <div className="absolute bottom-4 right-4 bg-gradient-to-r from-[#2d1b4d]/90 to-[#4945FF]/90 rounded-lg px-4 py-3 max-w-[60%] backdrop-blur-sm flex items-center space-x-3 shadow-lg">
+                        <span className="text-white text-xl">🚀</span>
+                        <p className="text-white text-sm font-medium font-['Raleway']">
+                          Advocates Drive Growth
+                        </p>
+                      </div>
+                      
+                      {/* Subtle decoration elements */}
+                      <div className="absolute top-4 left-4">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" stroke="white" strokeWidth="2" opacity="0.5"/>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-[#4945FF] to-[#2d1b4d] rounded-full flex items-center justify-center shadow-lg">
-                    <span className="text-white text-5xl">🚀</span>
+                  {/* Subtle decorative element that reinforces the network theme */}
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-gradient-to-br from-[#4945FF]/10 to-[#2d1b4d]/10 backdrop-blur-sm flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4945FF] to-[#2d1b4d] flex items-center justify-center shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
