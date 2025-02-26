@@ -98,13 +98,33 @@ function LandingPageB() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.2] font-extrabold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative drop-shadow-sm font-['Raleway']">
                   Turn Connections into Cash with Buildable's Referral Program
                 </h1>
-                <p className="max-w-[800px] text-gray-800 text-lg md:text-xl leading-relaxed animate-appear [animation-delay:0.5s] [animation-fill-mode:backwards] mx-auto font-['Lato']">
-                  Introduce businesses to Buildable's custom software solutions, and earn up to 10% of monthly invoices for six months — no technical expertise or project management required.
-                  <br className="hidden md:block" />
-                  <span className="block mt-4">Just connect, and we handle the rest.</span>
-                </p>
+                
+                {/* Enhanced Subheadline */}
+                <div className="max-w-[800px] mx-auto animate-appear [animation-delay:0.5s] [animation-fill-mode:backwards]">
+                  <div className="relative flex items-center justify-center mb-6">
+                    <div className="absolute h-px w-16 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+                  </div>
+                  
+                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-['Lato']">
+                    Introduce businesses to Buildable's custom software solutions, and earn up to{' '}
+                    <span className="inline-flex items-center font-semibold text-[#4945FF] px-1">
+                      <span className="text-2xl md:text-3xl">10%</span>
+                    </span>{' '}
+                    of monthly invoices for{' '}
+                    <span className="font-semibold text-[#1a1f36]">six months</span>
+                    {' '}— no technical expertise or project management required.
+                  </p>
+                  
+                  <p className="mt-5 text-lg md:text-xl font-medium text-gray-800">
+                    Just connect, and we handle the rest.
+                  </p>
+                  
+                  <div className="flex justify-center mt-6">
+                    <div className="h-1 w-16 bg-gradient-to-r from-transparent via-[#4945FF]/40 to-transparent rounded-full"></div>
+                  </div>
+                </div>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center mt-10">
                 <Button 
                   size="lg" 
                   className="bg-[#4945FF] hover:bg-[#3835db] active:bg-[#2f2cb6] transition-colors text-white px-8 py-5 text-lg font-medium rounded-md shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0 duration-200"
