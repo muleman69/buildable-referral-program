@@ -76,36 +76,38 @@ function LandingPageB() {
       </header>
 
       {/* Hero Section */}
-      <div className="py-20 bg-white relative z-[1]">
-        <div className="absolute inset-0 z-0">
+      <div className="py-24 md:py-32 bg-white relative z-[1]">
+        <div className="absolute inset-0 z-0 after:content-[''] after:absolute after:inset-0 after:bg-white/30">
           <img
             alt="Hero Background"
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover opacity-15"
             src="https://ik.imagekit.io/buildable/Credit%20Union%20Hero%20Image%20(6).png?updatedAt=1739869859389"
           />
         </div>
-        <div className="container relative z-[2] mx-auto px-4 md:px-6">
+        <div className="container relative z-[2] mx-auto px-6 md:px-8">
           <div className="flex flex-col items-center">
             {/* Hero Text */}
-            <div className="flex flex-col justify-center space-y-12 text-center max-w-5xl mx-auto">
-              <div className="space-y-8">
+            <div className="flex flex-col justify-center space-y-14 text-center max-w-5xl mx-auto px-4 md:px-6">
+              <div className="space-y-10">
                 <Badge
-                  className="animate-appear [animation-delay:0.3s] [animation-fill-mode:backwards] mx-auto text-white"
+                  className="animate-appear [animation-delay:0.3s] [animation-fill-mode:backwards] mx-auto text-white font-medium px-4 py-2 text-base"
                   variant="secondary"
                 >
                   Buildable Referral Program
                 </Badge>
-                <h1 className="text-[96px] leading-[1.1] font-extrabold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.2] font-extrabold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative drop-shadow-sm font-['Raleway']">
                   Turn Connections into Cash with Buildable's Referral Program
                 </h1>
-                <p className="max-w-[800px] text-gray-600 text-2xl animate-appear [animation-delay:0.5s] [animation-fill-mode:backwards] mx-auto">
-                  Introduce businesses to Buildable's custom software solutions, and earn up to 10% of monthly invoices for six months — no technical expertise or project management required. Just connect, and we handle the rest.
+                <p className="max-w-[800px] text-gray-800 text-lg md:text-xl leading-relaxed animate-appear [animation-delay:0.5s] [animation-fill-mode:backwards] mx-auto font-['Lato']">
+                  Introduce businesses to Buildable's custom software solutions, and earn up to 10% of monthly invoices for six months — no technical expertise or project management required.
+                  <br className="hidden md:block" />
+                  <span className="block mt-4">Just connect, and we handle the rest.</span>
                 </p>
               </div>
               <div className="flex justify-center">
                 <Button 
                   size="lg" 
-                  className="bg-[#4945FF] hover:bg-[#4945FF]/90 text-white px-10 py-6 text-xl font-medium"
+                  className="bg-[#4945FF] hover:bg-[#3835db] active:bg-[#2f2cb6] transition-colors text-white px-8 py-5 text-lg font-medium rounded-md shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0 duration-200"
                 >
                   REQUEST PROGRAM DETAILS
                 </Button>
