@@ -7,6 +7,7 @@ import { Glow } from '../components/ui/glow'
 import { AnimatedGridPattern } from '../components/ui/animated-grid-pattern'
 import { GlowEffect } from '../components/ui/glow-effect'
 import { BackgroundBeamsWithCollision } from '../components/ui/background-beams-with-collision'
+import EarningsCalculator from '../components/calculator/EarningsCalculator'
 
 function LandingPageB() {
   const [formData, setFormData] = useState({
@@ -516,8 +517,16 @@ function LandingPageB() {
             </div>
           </div>
 
+          {/* Earnings Calculator Section */}
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
+            <h3 className="text-4xl font-bold text-center text-[#1a1f36] mb-12 font-['Raleway']">
+              Calculate Your Potential Earnings
+            </h3>
+            <EarningsCalculator />
+          </div>
+
           {/* GET STARTED Section */}
-          <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div id="get-started" className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8 font-['Raleway']">
               Start earning with Buildable's Partner Program today.
             </h2>
