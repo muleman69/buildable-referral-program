@@ -5,6 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
         background: "hsl(var(--background))",
@@ -19,7 +26,10 @@ export default {
           dark: '#475569',
           foreground: "hsl(var(--secondary-foreground))",
         },
-        brand: "hsl(var(--brand))",
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          foreground: "hsl(var(--brand-foreground))",
+        },
         "brand-foreground": "hsl(var(--brand-foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",
@@ -46,7 +56,8 @@ export default {
         ring: "hsl(var(--ring))",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Lato', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
       },
       maxWidth: {
         'container': '1400px',

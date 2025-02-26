@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -61,12 +61,20 @@
     --ring: 224.3 76.3% 48%;
   }
 
-  html {
+  html, body {
     @apply scroll-smooth;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
   }
   
-  body {
-    @apply font-sans text-gray-900 antialiased;
+  h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+  }
+  
+  h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
   }
 }
 
@@ -188,12 +196,4 @@
   * {
     @apply border-border;
   }
-}
-
-html, body {
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

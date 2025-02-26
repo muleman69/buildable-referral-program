@@ -95,7 +95,7 @@ function LandingPageB() {
                 >
                   Buildable Referral Program
                 </Badge>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.2] font-extrabold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative drop-shadow-sm font-['Raleway']">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.2] font-bold text-[#1a1f36] tracking-tight animate-appear [animation-delay:0.4s] [animation-fill-mode:backwards] relative drop-shadow-sm font-['Raleway']">
                   Turn Connections into Cash with Buildable's Referral Program
                 </h1>
                 
@@ -105,7 +105,7 @@ function LandingPageB() {
                     <div className="absolute h-px w-16 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
                   </div>
                   
-                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-['Lato']">
+                  <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-['Lato'] font-normal">
                     Introduce businesses to Buildable's custom software solutions, and earn up to{' '}
                     <span className="inline-flex items-center font-semibold text-[#4945FF] px-1">
                       <span className="text-2xl md:text-3xl">10%</span>
@@ -115,7 +115,7 @@ function LandingPageB() {
                     {' '}— no technical expertise or project management required.
                   </p>
                   
-                  <p className="mt-5 text-lg md:text-xl font-medium text-gray-800">
+                  <p className="mt-5 text-lg md:text-xl font-medium text-gray-800 font-['Lato']">
                     Just connect, and we handle the rest.
                   </p>
                   
@@ -149,15 +149,15 @@ function LandingPageB() {
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1f36] to-[#2d3352] p-8 group"
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 h-full">
-                <h3 className="text-4xl font-bold text-white mb-8">The Buildable Advantage</h3>
+                <h3 className="text-4xl font-bold text-white mb-8 font-['Raleway']">The Buildable Advantage</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
                       <span className="text-2xl">💰</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Generous Commission Structure</h4>
-                      <p className="text-white/80 text-lg">Earn up to 10% of monthly invoices for six months</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Generous Commission Structure</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Earn up to 10% of monthly invoices for six months</p>
                     </div>
                   </div>
 
@@ -166,8 +166,8 @@ function LandingPageB() {
                       <span className="text-2xl">🎯</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Zero Technical Requirements</h4>
-                      <p className="text-white/80 text-lg">Just make the introduction, we handle everything else</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Zero Technical Requirements</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Just make the introduction, we handle everything else</p>
                     </div>
                   </div>
 
@@ -176,8 +176,8 @@ function LandingPageB() {
                       <span className="text-2xl">📊</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Transparent Tracking</h4>
-                      <p className="text-white/80 text-lg">Clear reporting on project status and commission calculations</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Transparent Tracking</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Clear reporting on project status and commission calculations</p>
                     </div>
                   </div>
 
@@ -186,8 +186,8 @@ function LandingPageB() {
                       <span className="text-2xl">👥</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Professional Support</h4>
-                      <p className="text-white/80 text-lg">Dedicated partner manager ensures smooth handoffs</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Professional Support</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Dedicated partner manager ensures smooth handoffs</p>
                     </div>
                   </div>
 
@@ -196,8 +196,8 @@ function LandingPageB() {
                       <span className="text-2xl">🏢</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Oregon-Based Development</h4>
-                      <p className="text-white/80 text-lg">Clients work directly with our US-based engineering team</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Oregon-Based Development</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Clients work directly with our US-based engineering team</p>
                     </div>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ function LandingPageB() {
               className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-8 group"
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 h-full flex flex-col">
-                <h3 className="text-4xl font-bold text-white mb-12">How It Works</h3>
+                <h3 className="text-4xl font-bold text-white mb-12 font-['Raleway']">How It Works</h3>
                 
                 <div className="space-y-8 mb-12">
                   <div className="relative pl-16">
@@ -220,8 +220,8 @@ function LandingPageB() {
                       1
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Partner Registration</h4>
-                      <p className="text-white/80 text-lg">Complete our quick application process</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Partner Registration</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Complete our quick application process</p>
                     </div>
                   </div>
 
@@ -230,8 +230,8 @@ function LandingPageB() {
                       2
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Make Introductions</h4>
-                      <p className="text-white/80 text-lg">Connect us with businesses needing software solutions</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Make Introductions</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Connect us with businesses needing software solutions</p>
                     </div>
                   </div>
 
@@ -240,18 +240,18 @@ function LandingPageB() {
                       3
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2">Earn Commissions</h4>
-                      <p className="text-white/80 text-lg">Receive payments when projects launch and bills are paid</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Earn Commissions</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Receive payments when projects launch and bills are paid</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-auto">
                   <blockquote className="relative p-6 bg-white/5 rounded-xl border-l-4 border-white/30">
-                    <p className="text-white/90 text-lg italic leading-relaxed mb-4">
+                    <p className="text-white/90 text-lg italic leading-relaxed mb-4 font-['Lato'] font-normal">
                       "Buildable's program is a no-brainer. One introduction turned into a $28,000 commission in just three months — the team is professional, and great to work with."
                     </p>
-                    <footer className="text-white/70">
+                    <footer className="text-white/70 font-['Lato'] font-normal">
                       – Michael T., Industry Consultant & Buildable Partner Since 2023
                     </footer>
                   </blockquote>
@@ -272,13 +272,13 @@ function LandingPageB() {
               className="text-left relative"
             >
               <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-green-200 to-transparent"></div>
-              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Simple</h3>
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8 font-['Raleway']">Simple</h3>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-6xl font-light">3</span>
                 <span className="text-2xl">steps</span>
                 <span className="text-gray-400 ml-2">®</span>
               </div>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600 text-lg font-['Lato'] font-normal">
                 Our streamlined referral process requires minimal effort from partners
               </p>
             </motion.div>
@@ -290,12 +290,12 @@ function LandingPageB() {
               className="text-left relative"
             >
               <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-purple-200 to-transparent"></div>
-              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Powerful</h3>
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8 font-['Raleway']">Powerful</h3>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-6xl font-light">$27K</span>
                 <span className="text-gray-400 ml-2">↗</span>
               </div>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600 text-lg font-['Lato'] font-normal">
                 Average commission earned by our top referral partners in 2024
               </p>
             </motion.div>
@@ -307,13 +307,13 @@ function LandingPageB() {
               className="text-left relative"
             >
               <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-blue-200 to-transparent"></div>
-              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8">Personal</h3>
+              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8 font-['Raleway']">Personal</h3>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-6xl font-light">89</span>
                 <span className="text-2xl">%</span>
                 <span className="text-gray-400 ml-2">☺</span>
               </div>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-600 text-lg font-['Lato'] font-normal">
                 Of referral partners have made multiple successful introductions
               </p>
             </motion.div>
@@ -324,10 +324,10 @@ function LandingPageB() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mt-32 mb-16"
           >
-            <p className="text-xl text-gray-600 mb-6">
+            <p className="text-xl text-gray-600 mb-6 font-['Lato'] font-normal">
               Ready to start earning commissions? Join our partner program today.
             </p>
-            <a href="#" className="text-blue-600 text-lg font-medium hover:text-blue-700 inline-flex items-center">
+            <a href="#" className="text-blue-600 text-lg font-medium hover:text-blue-700 inline-flex items-center font-['Lato'] font-normal">
               Learn more about the program
               <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -357,15 +357,15 @@ function LandingPageB() {
             
             <div className="w-2/3">
               <blockquote>
-                <p className="text-3xl font-light text-gray-900 mb-8 leading-relaxed">
+                <p className="text-3xl font-light text-gray-900 mb-8 leading-relaxed font-['Lato'] font-normal">
                   "Partnering with Buildable has been a game-changer for my consulting business. Their team handles all the technical delivery while I focus on what I do best - building relationships. The commission structure is generous, and their support team is always there when I need them."
                 </p>
                 <footer>
                   <div className="flex items-center">
                     <div>
-                      <div className="text-lg font-semibold text-gray-900">Sarah Chen</div>
-                      <div className="text-gray-600">Principal Consultant</div>
-                      <div className="text-gray-600">Digital Transformation Partners</div>
+                      <div className="text-lg font-semibold text-gray-900 font-['Raleway']">Sarah Chen</div>
+                      <div className="text-gray-600 font-['Lato']">Principal Consultant</div>
+                      <div className="text-gray-600 font-['Lato']">Digital Transformation Partners</div>
                     </div>
                   </div>
                 </footer>
@@ -383,7 +383,7 @@ function LandingPageB() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <div className="relative inline-block">
-            <h2 className="text-[96px] leading-[1.1] font-extrabold text-[#1a1f36] tracking-tight mb-8">
+            <h2 className="text-[96px] leading-[1.1] font-bold text-[#1a1f36] tracking-tight mb-8 font-['Raleway']">
               Your Network.
               <br />
               Our Expertise.
@@ -397,50 +397,50 @@ function LandingPageB() {
             <div className="bg-gradient-to-br from-[#2d1b4d] to-[#492c7f] p-16">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <div>
-                  <h3 className="text-4xl font-bold text-white mb-8">Transform Your Network</h3>
+                  <h3 className="text-4xl font-bold text-white mb-8 font-['Raleway']">Transform Your Network</h3>
                   <div className="space-y-6">
-                    <p className="text-2xl text-white/90 leading-relaxed">
+                    <p className="text-2xl text-white/90 leading-relaxed font-['Lato'] font-normal">
                       Ready to transform your professional network into a revenue stream?
                     </p>
-                    <p className="text-2xl text-white/90 leading-relaxed">
+                    <p className="text-2xl text-white/90 leading-relaxed font-['Lato'] font-normal">
                       Join Buildable's Partner Program and start earning substantial commissions for connecting us with businesses that need custom software solutions.
                     </p>
                   </div>
                 </div>
                 
                 <div>
-                  <h3 className="text-4xl font-bold text-white mb-8">Perfect For</h3>
+                  <h3 className="text-4xl font-bold text-white mb-8 font-['Raleway']">Perfect For</h3>
                   <ul className="space-y-6">
                     <li className="flex items-center space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
                         <span className="text-2xl">👔</span>
                       </div>
-                      <span className="text-2xl text-white/90">Business Consultants</span>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Business Consultants</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
                         <span className="text-2xl">🏢</span>
                       </div>
-                      <span className="text-2xl text-white/90">Agency Owners</span>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Agency Owners</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
                         <span className="text-2xl">💡</span>
                       </div>
-                      <span className="text-2xl text-white/90">Industry Experts</span>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Industry Experts</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
                         <span className="text-2xl">🤝</span>
                       </div>
-                      <span className="text-2xl text-white/90">Professional Service Providers</span>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Professional Service Providers</span>
                     </li>
                   </ul>
                 </div>
               </div>
               
               <div className="mt-16 p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-                <p className="text-2xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto">
+                <p className="text-2xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto font-['Lato'] font-normal">
                   Don't let valuable opportunities slip away. Partner with Buildable and turn your connections into commissions while ensuring your network gets access to world-class software development services.
                 </p>
               </div>
@@ -449,11 +449,11 @@ function LandingPageB() {
 
           {/* GET STARTED Section */}
           <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8 font-['Raleway']">
               Start earning with Buildable's Partner Program today.
             </h2>
             <div className="flex justify-center">
-              <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-medium hover:bg-[#4945FF]/90 transition-colors">
+              <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-['Lato'] font-normal hover:bg-[#4945FF]/90 transition-colors">
                 Request Program Details
               </button>
             </div>
