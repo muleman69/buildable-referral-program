@@ -389,16 +389,19 @@ function LandingPageB() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <div className="relative inline-block">
-            <h2 className="text-[96px] leading-[1.1] font-bold text-[#1a1f36] tracking-tight mb-8 font-['Raleway']">
-              Your Network.
+          <div className="relative inline-block py-10 px-8 rounded-xl bg-gradient-to-b from-[#4945FF]/5 to-white">
+            <h2 className="text-[80px] sm:text-[60px] md:text-[80px] leading-[1.3] font-bold text-[#1a1f36] tracking-tight mb-8 font-['Raleway']">
+              Your Network
               <br />
-              Our Expertise.
+              Our Expertise
               <br />
-              Shared Success<span className="relative inline-block">.</span>
+              <span className="relative inline-block">
+                Shared Success
+                <span className="absolute -bottom-4 left-0 right-0 h-[3px] bg-[#1a1f36] w-[110%] mx-auto"></span>
+              </span>
             </h2>
-            <p className="text-2xl text-gray-700 max-w-4xl mx-auto mt-8 mb-16 font-['Lato'] font-normal">
-              Join an exclusive community of top-tier professionals and become a trusted Buildable advocate.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mt-8 mb-16 font-['Lato'] font-normal px-4">
+              Join top-tier professionals as a trusted Buildable advocate.
             </p>
           </div>
 
