@@ -60,7 +60,9 @@ const EarningsCalculator = () => {
     { label: '1', value: 1 },
     { label: '3', value: 3 },
     { label: '6', value: 6 },
-    { label: '10', value: 10 }
+    { label: '10', value: 10 },
+    { label: '25', value: 25 },
+    { label: '50', value: 50 }
   ];
   
   // Calculate commissions whenever inputs change
@@ -132,11 +134,11 @@ const EarningsCalculator = () => {
   
   // Chart data
   const chartData = {
-    labels: Array.from({ length: 20 }, (_, i) => i + 1),
+    labels: Array.from({ length: 50 }, (_, i) => i + 1),
     datasets: [
       {
         label: 'Annual Commission',
-        data: Array.from({ length: 20 }, (_, i) => {
+        data: Array.from({ length: 50 }, (_, i) => {
           const refs = i + 1;
           const rate = refs <= 2 ? 0.05 : refs <= 5 ? 0.07 : 0.1;
           return (projectAmount / projectDuration) * 0.4 * rate * projectDuration * refs;
@@ -290,14 +292,14 @@ const EarningsCalculator = () => {
           <input 
             type="range" 
             min="1" 
-            max="20" 
+            max="50" 
             value={referrals} 
             onChange={(e) => setReferrals(parseInt(e.target.value))}
             className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#4945FF]"
           />
           <div className="flex justify-between text-xs text-gray-500 mt-1">
             <span>1</span>
-            <span>20</span>
+            <span>50</span>
           </div>
           <div className="preset-buttons flex flex-wrap gap-2 mt-3">
             {presetReferrals.map((preset) => (
