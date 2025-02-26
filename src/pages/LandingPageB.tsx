@@ -63,7 +63,7 @@ function LandingPageB() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-[100]">
+      <header className="bg-white shadow-sm">
         <div className="max-w-[1800px] mx-auto px-8 py-2 bg-white/80 backdrop-blur-sm">
           <div className="flex items-center justify-between">
             <img 
@@ -76,7 +76,7 @@ function LandingPageB() {
       </header>
 
       {/* Hero Section */}
-      <div className="min-h-screen pt-48 bg-white relative z-[1]">
+      <div className="min-h-screen bg-white relative z-[1]">
         <div className="absolute inset-0 z-0">
           <img
             alt="Hero Background"
@@ -85,7 +85,7 @@ function LandingPageB() {
           />
         </div>
         <div className="container relative z-[2] mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center gap-12 mt-24">
+          <div className="flex flex-col items-center gap-12">
             {/* Hero Text */}
             <div className="flex flex-col justify-center space-y-8 text-center max-w-5xl mx-auto">
               <div className="space-y-6">
