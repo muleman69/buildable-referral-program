@@ -298,6 +298,9 @@ function LandingPageB() {
               <p className="text-gray-600 text-lg font-['Lato'] font-normal">
                 Average commission earned by our top referral partners in 2024
               </p>
+              <p className="text-gray-600 text-lg font-['Lato'] font-normal mt-4">
+                Our tiered structure rewards active partners, with higher commissions and exclusive benefits for those who consistently bring value.
+              </p>
             </motion.div>
 
             <motion.div
@@ -315,6 +318,9 @@ function LandingPageB() {
               </div>
               <p className="text-gray-600 text-lg font-['Lato'] font-normal">
                 Of referral partners have made multiple successful introductions
+              </p>
+              <p className="text-gray-600 text-lg font-['Lato'] font-normal mt-4">
+                Top partners enjoy recognition, exclusive events, and direct access to Buildable leadership.
               </p>
             </motion.div>
           </div>
@@ -390,6 +396,9 @@ function LandingPageB() {
               <br />
               Shared Success<span className="relative inline-block">.</span>
             </h2>
+            <p className="text-2xl text-gray-700 max-w-4xl mx-auto mt-8 mb-16 font-['Lato'] font-normal">
+              Join an exclusive community of top-tier professionals and become a trusted Buildable advocate.
+            </p>
           </div>
 
           {/* Final CTA Section */}
@@ -435,7 +444,28 @@ function LandingPageB() {
                       </div>
                       <span className="text-2xl text-white/90 font-['Lato'] font-normal">Professional Service Providers</span>
                     </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">🎙️</span>
+                      </div>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Podcast Hosts</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">👨‍💼</span>
+                      </div>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Corporate Coaches</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                        <span className="text-2xl">📱</span>
+                      </div>
+                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Industry Influencers</span>
+                    </li>
                   </ul>
+                  <p className="text-white/80 text-lg font-['Lato'] mt-6">
+                    We welcome unconventional partners who can connect us with unique, high-value opportunities.
+                  </p>
                 </div>
               </div>
               
@@ -447,6 +477,45 @@ function LandingPageB() {
             </div>
           </div>
 
+          {/* New Section: Building a Community of Advocates */}
+          <div className="py-20 bg-[#F9F9FB] rounded-3xl my-20 max-w-6xl mx-auto">
+            <div className="max-w-5xl mx-auto px-8">
+              <h3 className="text-4xl font-bold text-center text-[#1a1f36] mb-10 font-['Raleway']">
+                Building a Community of Advocates
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <p className="text-xl leading-relaxed text-gray-700 font-['Lato'] font-normal mb-6">
+                    Beyond referrals, we're building a network of advocates who champion Buildable. As a partner, you'll join an exclusive community, gain recognition, and access unique opportunities to grow your influence and earnings.
+                  </p>
+                  <div className="bg-gradient-to-r from-[#2d1b4d]/80 to-[#4945FF]/80 p-4 rounded-lg">
+                    <p className="text-white text-lg font-['Lato'] italic text-center">
+                      "Advocates Drive Growth"
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="relative">
+                  <div className="aspect-square rounded-xl overflow-hidden bg-white shadow-lg">
+                    <img 
+                      src="https://ik.imagekit.io/buildable/network-professionals.jpg?updatedAt=1739872336229" 
+                      alt="Networked Professionals" 
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80";
+                      }}
+                    />
+                  </div>
+                  
+                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-[#4945FF] to-[#2d1b4d] rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-white text-5xl">🚀</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* GET STARTED Section */}
           <div className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center text-black mb-8 font-['Raleway']">
@@ -454,7 +523,7 @@ function LandingPageB() {
             </h2>
             <div className="flex justify-center">
               <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-['Lato'] font-normal hover:bg-[#4945FF]/90 transition-colors">
-                Request Program Details
+                Partner with Buildable today and start earning
               </button>
             </div>
           </div>
