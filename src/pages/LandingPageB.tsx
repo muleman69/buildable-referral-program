@@ -64,15 +64,13 @@ function LandingPageB() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-[1800px] mx-auto px-8 py-2 bg-white/80 backdrop-blur-sm">
-          <div className="flex items-center justify-between">
-            <img 
-              src="https://ik.imagekit.io/buildable/Buildable-portrait-color-sq@0.5x.png?updatedAt=1739864048603" 
-              alt="Buildable" 
-              className="h-36"
-            />
-          </div>
+      <header className="bg-white w-full">
+        <div className="max-w-[1800px] mx-auto">
+          <img 
+            src="https://ik.imagekit.io/buildable/Buildable_Header.png?updatedAt=1740622781014" 
+            alt="Buildable Header" 
+            className="w-full"
+          />
         </div>
       </header>
 
@@ -558,11 +556,13 @@ function LandingPageB() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-[#1d2333] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-2xl font-light text-gray-400">
-            FOOTER
-          </div>
+      <footer className="bg-white w-full">
+        <div className="max-w-[1800px] mx-auto">
+          <img 
+            src="https://ik.imagekit.io/buildable/Buildable_Footer.png?updatedAt=1740622621077" 
+            alt="Buildable Footer" 
+            className="w-full"
+          />
         </div>
       </footer>
     </div>
