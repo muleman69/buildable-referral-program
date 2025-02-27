@@ -387,7 +387,7 @@ function LandingPageB() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <div className="relative inline-block py-10 px-8 rounded-xl bg-gradient-to-b from-[#4945FF]/5 to-white">
+          <div className="relative inline-block py-10 px-8">
             <h2 className="text-[80px] sm:text-[60px] md:text-[80px] leading-[1.3] font-bold text-[#1a1f36] tracking-tight mb-8 font-['Raleway']">
               Your Network
               <br />
@@ -398,9 +398,6 @@ function LandingPageB() {
                 <span className="absolute -bottom-4 left-0 right-0 h-[3px] bg-[#1a1f36] w-[110%] mx-auto"></span>
               </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mt-8 mb-16 font-['Lato'] font-normal px-4">
-              Join top-tier professionals as a trusted Buildable advocate.
-            </p>
           </div>
 
           {/* Final CTA Section */}
@@ -501,7 +498,7 @@ function LandingPageB() {
                     </div>
                     <div className="flex-1">
                       <div className="h-2 bg-gradient-to-r from-[#4945FF] to-[#2d1b4d] rounded-full"></div>
-                      <p className="text-[#4945FF] font-semibold mt-2 font-['Lato']">Join our exclusive network today</p>
+                      <p className="text-[#4945FF] font-semibold mt-2 font-['Lato'] hover:text-[#3835db] cursor-pointer transition-colors">Join our exclusive network today</p>
                     </div>
                   </div>
                 </div>
@@ -548,7 +545,7 @@ function LandingPageB() {
             </h2>
             <div className="flex justify-center">
               <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-['Lato'] font-normal hover:bg-[#4945FF]/90 transition-colors">
-                Partner with Buildable today and start earning
+                Request Program Details
               </button>
             </div>
           </div>
