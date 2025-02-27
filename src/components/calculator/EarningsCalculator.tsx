@@ -27,8 +27,10 @@ const Tooltip = ({ text }: { text: string }) => (
 const EarningsCalculator = () => {
   // State for slider values
   const [projectAmount, setProjectAmount] = useState(300000);
-  const [projectDuration, setProjectDuration] = useState(6);
   const [referrals, setReferrals] = useState(1);
+  
+  // Fixed 6-month duration for all calculations
+  const COMMISSION_PERIOD = 6;
   
   // State for calculation results
   const [tier, setTier] = useState('');
@@ -68,12 +70,12 @@ const EarningsCalculator = () => {
   // Calculate commissions whenever inputs change
   useEffect(() => {
     calculateCommission();
-  }, [projectAmount, projectDuration, referrals]);
+  }, [projectAmount, referrals]);
   
   // Calculate the commission based on inputs
   const calculateCommission = () => {
     const netProfitMargin = 0.4;
-    const monthlyInvoice = projectAmount / projectDuration;
+    const monthlyInvoice = projectAmount / COMMISSION_PERIOD;
     
     // Determine tier and commission rate
     let commissionRate, tierName, nextTierReferrals;
@@ -98,7 +100,7 @@ const EarningsCalculator = () => {
     // Calculations
     const monthlyNetProfit = monthlyInvoice * netProfitMargin;
     const monthlyCommission = monthlyNetProfit * commissionRate;
-    const totalPerReferral = monthlyCommission * projectDuration;
+    const totalPerReferral = monthlyCommission * COMMISSION_PERIOD;
     const totalAnnual = totalPerReferral * referrals;
     
     // Set results
@@ -141,7 +143,7 @@ const EarningsCalculator = () => {
         data: Array.from({ length: 50 }, (_, i) => {
           const refs = i + 1;
           const rate = refs <= 2 ? 0.05 : refs <= 5 ? 0.07 : 0.1;
-          return (projectAmount / projectDuration) * 0.4 * rate * projectDuration * refs;
+          return (projectAmount / COMMISSION_PERIOD) * 0.4 * rate * COMMISSION_PERIOD * refs;
         }),
         borderColor: '#4945FF',
         backgroundColor: 'rgba(73, 69, 255, 0.1)',
@@ -262,28 +264,6 @@ const EarningsCalculator = () => {
         <div>
           <div className="flex justify-between mb-2">
             <div className="flex items-center">
-              <label className="block font-medium text-gray-700 font-['Lato']">Project Duration</label>
-              <Tooltip text="The typical duration of projects is 6 months. Commission is paid monthly throughout the project." />
-            </div>
-            <span className="text-[#4945FF] font-bold font-['Lato']">{projectDuration} months</span>
-          </div>
-          <input 
-            type="range" 
-            min="3" 
-            max="12" 
-            value={projectDuration} 
-            onChange={(e) => setProjectDuration(parseInt(e.target.value))}
-            className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#4945FF]"
-          />
-          <div className="flex justify-between text-xs text-gray-500 mt-1">
-            <span>3 months</span>
-            <span>12 months</span>
-          </div>
-        </div>
-        
-        <div>
-          <div className="flex justify-between mb-2">
-            <div className="flex items-center">
               <label className="block font-medium text-gray-700 font-['Lato']">Number of Referrals</label>
               <Tooltip text="How many projects you expect to refer in a year. More referrals can increase your commission rate." />
             </div>
@@ -363,7 +343,7 @@ const EarningsCalculator = () => {
           <div className="text-center p-4 bg-white rounded-lg shadow-sm border-t-4 border-[#4945FF]">
             <h3 className="text-gray-500 text-sm mb-2 font-['Lato']">Per Referral</h3>
             <p className="text-xl font-bold text-[#2d1b4d] font-['Raleway']">{formatCurrency(perReferral)}</p>
-            <p className="text-xs text-gray-500 font-['Lato']">over {projectDuration} months</p>
+            <p className="text-xs text-gray-500 font-['Lato']">over 6 months</p>
           </div>
           <div className="text-center p-4 bg-white rounded-lg shadow-sm border-t-4 border-[#4945FF]">
             <h3 className="text-gray-500 text-sm mb-2 font-['Lato']">Annual Total</h3>
@@ -397,7 +377,7 @@ const EarningsCalculator = () => {
                     Monthly Invoice
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {formatCurrency(projectAmount)} / {projectDuration} months
+                    {formatCurrency(projectAmount)} / 6 months
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                     {formatCurrency(breakdown.monthlyInvoice)}
@@ -430,7 +410,7 @@ const EarningsCalculator = () => {
                     Total per Referral
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {formatCurrency(breakdown.monthlyCommission)} × {projectDuration} months
+                    {formatCurrency(breakdown.monthlyCommission)} × 6 months
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                     {formatCurrency(breakdown.totalPerReferral)}
