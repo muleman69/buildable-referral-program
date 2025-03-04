@@ -84,18 +84,18 @@ const EarningsCalculator = () => {
     // Determine tier and commission rate
     let commissionRate, tierName, nextTierReferrals, currentTierNumber;
     
-    if (referrals <= 2) {
+    if (referrals <= 3) {
       commissionRate = 0.05;
       tierName = 'Referral Partner (5%)';
-      nextTierReferrals = 3;
+      nextTierReferrals = 4;
       currentTierNumber = 1;
-      setProgressToNextTier((referrals / 3) * 100);
-    } else if (referrals <= 5) {
+      setProgressToNextTier((referrals / 4) * 100);
+    } else if (referrals <= 6) {
       commissionRate = 0.07;
       tierName = 'Alliance Partner (7%)';
-      nextTierReferrals = 6;
+      nextTierReferrals = 7;
       currentTierNumber = 2;
-      setProgressToNextTier(((referrals - 3) / 3) * 100);
+      setProgressToNextTier(((referrals - 4) / 3) * 100);
     } else {
       commissionRate = 0.1;
       tierName = 'Strategic Partner (10%)';
@@ -124,18 +124,18 @@ const EarningsCalculator = () => {
     });
     
     // Set message
-    if (referrals >= 6) {
+    if (referrals >= 7) {
       setMessage(`With ${referrals} referrals, you're a Strategic Partner earning our maximum 10% commission rate!`);
     } else {
       setMessage(`You qualify for our ${tierName} level. Keep growing your network!`);
     }
     
     // Dynamic tip
-    if (referrals === 1 || referrals === 2) {
-      const neededReferrals = 3 - referrals;
+    if (referrals === 1 || referrals === 2 || referrals === 3) {
+      const neededReferrals = 4 - referrals;
       setDynamicTip(`Add just ${neededReferrals} more referral${neededReferrals > 1 ? 's' : ''} to reach Alliance Partner status and earn 7% commission!`);
-    } else if (referrals >= 3 && referrals <= 5) {
-      const neededReferrals = 6 - referrals;
+    } else if (referrals >= 4 && referrals <= 6) {
+      const neededReferrals = 7 - referrals;
       setDynamicTip(`Only ${neededReferrals} more referral${neededReferrals > 1 ? 's' : ''} to become a Strategic Partner with 10% commission!`);
     } else {
       setDynamicTip(`You've reached our highest tier! Add more clients to maximize your earnings.`);
@@ -150,7 +150,7 @@ const EarningsCalculator = () => {
         label: 'Annual Commission',
         data: Array.from({ length: 50 }, (_, i) => {
           const refs = i + 1;
-          const rate = refs <= 2 ? 0.05 : refs <= 5 ? 0.07 : 0.1;
+          const rate = refs <= 3 ? 0.05 : refs <= 6 ? 0.07 : 0.1;
           return (projectAmount / COMMISSION_PERIOD) * 0.4 * rate * COMMISSION_PERIOD * refs;
         }),
         borderColor: '#4945FF',
@@ -183,7 +183,7 @@ const EarningsCalculator = () => {
           },
           afterLabel: function(context: any) {
             const refs = parseInt(context.label);
-            const tierText = refs <= 2 ? 'Tier 1: Referral Partner (5%)' : refs <= 5 ? 'Tier 2: Alliance Partner (7%)' : 'Tier 3: Strategic Partner (10%)';
+            const tierText = refs <= 3 ? 'Tier 1: Referral Partner (5%)' : refs <= 6 ? 'Tier 2: Alliance Partner (7%)' : 'Tier 3: Strategic Partner (10%)';
             return `Tier: ${tierText}`;
           }
         }
@@ -326,11 +326,11 @@ const EarningsCalculator = () => {
           <div className="flex justify-between mb-2">
             <div className="flex items-center">
               <span className="text-base font-medium text-[#2d1b4d] font-['Lato']">Tier {tierNumber}: {tier}</span>
-              <Tooltip text="Your tier determines your commission rate: 0-2 referrals = 5%, 3-5 referrals = 7%, 6+ referrals = 10%" />
+              <Tooltip text="Your tier determines your commission rate: 0-3 referrals = 5%, 4-6 referrals = 7%, 7+ referrals = 10%" />
             </div>
             {progressToNextTier < 100 && (
               <span className="text-sm text-gray-500 font-['Lato']">Next Tier: {
-                referrals <= 2 ? 'Tier 2: Alliance Partner (7%)' : 'Tier 3: Strategic Partner (10%)'
+                referrals <= 3 ? 'Tier 2: Alliance Partner (7%)' : 'Tier 3: Strategic Partner (10%)'
               }</span>
             )}
           </div>
@@ -427,7 +427,7 @@ const EarningsCalculator = () => {
                     Monthly Commission
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {formatCurrency(breakdown.monthlyNetProfit)} × {referrals <= 2 ? '5%' : referrals <= 5 ? '7%' : '10%'}
+                    {formatCurrency(breakdown.monthlyNetProfit)} × {referrals <= 3 ? '5%' : referrals <= 6 ? '7%' : '10%'}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                     {formatCurrency(breakdown.monthlyCommission)}
@@ -473,7 +473,7 @@ const EarningsCalculator = () => {
       <div className="mt-8">
         <div className="flex items-center">
           <h3 className="text-lg font-semibold text-[#2d1b4d] mb-4 font-['Raleway']">Potential Earnings by Number of Referrals</h3>
-          <Tooltip text="This chart shows how your annual commission increases with more referrals. Notice the jumps at 3 and 6 referrals when you reach higher commission tiers." />
+          <Tooltip text="This chart shows how your annual commission increases with more referrals. Notice the jumps at 4 and 7 referrals when you reach higher commission tiers." />
         </div>
         <div className="h-72 mt-4">
           <Line data={chartData} options={chartOptions} />
@@ -488,7 +488,7 @@ const EarningsCalculator = () => {
             <span className="text-2xl font-bold text-[#4945FF]">5%</span>
             <span className="text-xs text-gray-500">commission</span>
           </div>
-          <p className="text-center text-sm mt-2 font-['Lato']">1-2 Referrals</p>
+          <p className="text-center text-sm mt-2 font-['Lato']">0-3 Referrals</p>
         </div>
         <div className="bg-gray-50 p-4 rounded-lg shadow-sm border-l-4 border-[#4945FF]/70">
           <h4 className="font-bold text-center mb-2 font-['Raleway']">Tier 2: Alliance Partner</h4>
@@ -496,7 +496,7 @@ const EarningsCalculator = () => {
             <span className="text-2xl font-bold text-[#4945FF]">7%</span>
             <span className="text-xs text-gray-500">commission</span>
           </div>
-          <p className="text-center text-sm mt-2 font-['Lato']">3-5 Referrals</p>
+          <p className="text-center text-sm mt-2 font-['Lato']">4-6 Referrals</p>
         </div>
         <div className="bg-gray-50 p-4 rounded-lg shadow-sm border-l-4 border-[#4945FF]">
           <h4 className="font-bold text-center mb-2 font-['Raleway']">Tier 3: Strategic Partner</h4>
@@ -504,7 +504,7 @@ const EarningsCalculator = () => {
             <span className="text-2xl font-bold text-[#4945FF]">10%</span>
             <span className="text-xs text-gray-500">commission</span>
           </div>
-          <p className="text-center text-sm mt-2 font-['Lato']">6+ Referrals</p>
+          <p className="text-center text-sm mt-2 font-['Lato']">7+ Referrals</p>
         </div>
       </div>
     </div>
