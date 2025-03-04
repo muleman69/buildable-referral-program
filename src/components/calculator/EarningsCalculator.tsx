@@ -26,14 +26,16 @@ const Tooltip = ({ text }: { text: string }) => (
 
 const EarningsCalculator = () => {
   // State for slider values
-  const [projectAmount, setProjectAmount] = useState(300000);
-  const [referrals, setReferrals] = useState(1);
+  const [projectAmount, setProjectAmount] = useState(0);
+  const [referrals, setReferrals] = useState(0);
+  const [hasInteracted, setHasInteracted] = useState(false);
   
   // Fixed 6-month duration for all calculations
   const COMMISSION_PERIOD = 6;
   
   // State for calculation results
   const [tier, setTier] = useState('');
+  const [tierNumber, setTierNumber] = useState(0);
   const [perReferral, setPerReferral] = useState(0);
   const [annualTotal, setAnnualTotal] = useState(0);
   const [breakdown, setBreakdown] = useState({
@@ -69,8 +71,10 @@ const EarningsCalculator = () => {
   
   // Calculate commissions whenever inputs change
   useEffect(() => {
-    calculateCommission();
-  }, [projectAmount, referrals]);
+    if (hasInteracted) {
+      calculateCommission();
+    }
+  }, [projectAmount, referrals, hasInteracted]);
   
   // Calculate the commission based on inputs
   const calculateCommission = () => {
@@ -78,22 +82,25 @@ const EarningsCalculator = () => {
     const monthlyInvoice = projectAmount / COMMISSION_PERIOD;
     
     // Determine tier and commission rate
-    let commissionRate, tierName, nextTierReferrals;
+    let commissionRate, tierName, nextTierReferrals, currentTierNumber;
     
     if (referrals <= 2) {
       commissionRate = 0.05;
       tierName = 'Referral Partner (5%)';
       nextTierReferrals = 3;
+      currentTierNumber = 1;
       setProgressToNextTier((referrals / 3) * 100);
     } else if (referrals <= 5) {
       commissionRate = 0.07;
       tierName = 'Alliance Partner (7%)';
       nextTierReferrals = 6;
+      currentTierNumber = 2;
       setProgressToNextTier(((referrals - 3) / 3) * 100);
     } else {
       commissionRate = 0.1;
       tierName = 'Strategic Partner (10%)';
       nextTierReferrals = null;
+      currentTierNumber = 3;
       setProgressToNextTier(100);
     }
     
@@ -105,6 +112,7 @@ const EarningsCalculator = () => {
     
     // Set results
     setTier(tierName);
+    setTierNumber(currentTierNumber);
     setPerReferral(totalPerReferral);
     setAnnualTotal(totalAnnual);
     setBreakdown({
@@ -175,7 +183,7 @@ const EarningsCalculator = () => {
           },
           afterLabel: function(context: any) {
             const refs = parseInt(context.label);
-            const tierText = refs <= 2 ? 'Referral Partner (5%)' : refs <= 5 ? 'Alliance Partner (7%)' : 'Strategic Partner (10%)';
+            const tierText = refs <= 2 ? 'Tier 1: Referral Partner (5%)' : refs <= 5 ? 'Tier 2: Alliance Partner (7%)' : 'Tier 3: Strategic Partner (10%)';
             return `Tier: ${tierText}`;
           }
         }
@@ -205,11 +213,24 @@ const EarningsCalculator = () => {
   
   // Handle preset button clicks
   const handlePresetProject = (value: number) => {
+    if (!hasInteracted) setHasInteracted(true);
     setProjectAmount(value);
   };
   
   const handlePresetReferral = (value: number) => {
+    if (!hasInteracted) setHasInteracted(true);
     setReferrals(value);
+  };
+  
+  // Handle slider changes
+  const handleProjectAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!hasInteracted) setHasInteracted(true);
+    setProjectAmount(parseInt(e.target.value));
+  };
+  
+  const handleReferralsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!hasInteracted) setHasInteracted(true);
+    setReferrals(parseInt(e.target.value));
   };
   
   // Format currency
@@ -223,44 +244,7 @@ const EarningsCalculator = () => {
       <p className="text-center text-gray-600 mb-8 font-['Lato']">Estimate your potential earnings as a Buildable partner by adjusting project size and referral count</p>
       
       <div className="inputs space-y-8">
-        <div>
-          <div className="flex justify-between mb-2">
-            <div className="flex items-center">
-              <label className="block font-medium text-gray-700 font-['Lato']">Total Project Amount</label>
-              <Tooltip text="The total value of the project you're referring (e.g., $100,000 for a 6-month project)." />
-            </div>
-            <span className="text-[#4945FF] font-bold font-['Lato']">{formatCurrency(projectAmount)}</span>
-          </div>
-          <input 
-            type="range" 
-            min="10000" 
-            max="2000000" 
-            step="10000"
-            value={projectAmount} 
-            onChange={(e) => setProjectAmount(parseInt(e.target.value))}
-            className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#4945FF]"
-          />
-          <div className="flex justify-between text-xs text-gray-500 mt-1">
-            <span>$10K</span>
-            <span>$2M</span>
-          </div>
-          <div className="preset-buttons flex flex-wrap gap-2 mt-3">
-            {presetProjects.map((preset) => (
-              <button 
-                key={preset.value}
-                onClick={() => handlePresetProject(preset.value)}
-                className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-                  projectAmount === preset.value 
-                    ? 'bg-[#4945FF] text-white' 
-                    : 'bg-[#4945FF]/20 text-[#4945FF] hover:bg-[#4945FF]/30'
-                }`}
-              >
-                {preset.label}
-              </button>
-            ))}
-          </div>
-        </div>
-        
+        {/* Number of Referrals - Now first */}
         <div>
           <div className="flex justify-between mb-2">
             <div className="flex items-center">
@@ -274,7 +258,7 @@ const EarningsCalculator = () => {
             min="1" 
             max="50" 
             value={referrals} 
-            onChange={(e) => setReferrals(parseInt(e.target.value))}
+            onChange={handleReferralsChange}
             className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#4945FF]"
           />
           <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -298,16 +282,55 @@ const EarningsCalculator = () => {
           </div>
         </div>
         
+        {/* Total Project Amount - Now second */}
+        <div>
+          <div className="flex justify-between mb-2">
+            <div className="flex items-center">
+              <label className="block font-medium text-gray-700 font-['Lato']">Total Project Amount</label>
+              <Tooltip text="The total value of the project you're referring (e.g., $100,000 for a 6-month project)." />
+            </div>
+            <span className="text-[#4945FF] font-bold font-['Lato']">{formatCurrency(projectAmount)}</span>
+          </div>
+          <input 
+            type="range" 
+            min="10000" 
+            max="2000000" 
+            step="10000"
+            value={projectAmount} 
+            onChange={handleProjectAmountChange}
+            className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#4945FF]"
+          />
+          <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <span>$10K</span>
+            <span>$2M</span>
+          </div>
+          <div className="preset-buttons flex flex-wrap gap-2 mt-3">
+            {presetProjects.map((preset) => (
+              <button 
+                key={preset.value}
+                onClick={() => handlePresetProject(preset.value)}
+                className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
+                  projectAmount === preset.value 
+                    ? 'bg-[#4945FF] text-white' 
+                    : 'bg-[#4945FF]/20 text-[#4945FF] hover:bg-[#4945FF]/30'
+                }`}
+              >
+                {preset.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        
         {/* Tier Progress Bar */}
         <div className="mt-4 bg-gray-50 p-4 rounded-lg">
           <div className="flex justify-between mb-2">
             <div className="flex items-center">
-              <span className="text-base font-medium text-[#2d1b4d] font-['Lato']">Current Tier: {tier}</span>
+              <span className="text-base font-medium text-[#2d1b4d] font-['Lato']">Tier {tierNumber}: {tier}</span>
               <Tooltip text="Your tier determines your commission rate: 0-2 referrals = 5%, 3-5 referrals = 7%, 6+ referrals = 10%" />
             </div>
             {progressToNextTier < 100 && (
               <span className="text-sm text-gray-500 font-['Lato']">Next Tier: {
-                referrals <= 2 ? 'Alliance Partner (7%)' : 'Strategic Partner (10%)'
+                referrals <= 2 ? 'Tier 2: Alliance Partner (7%)' : 'Tier 3: Strategic Partner (10%)'
               }</span>
             )}
           </div>
@@ -319,9 +342,9 @@ const EarningsCalculator = () => {
             <div className="absolute top-0 bottom-0 left-[100%] w-0.5 bg-gray-300 z-10"></div>
             
             {/* Tier labels */}
-            <div className="absolute top-[-20px] left-0 text-xs text-gray-500">Referral</div>
-            <div className="absolute top-[-20px] left-[47%] text-xs text-gray-500">Alliance</div>
-            <div className="absolute top-[-20px] left-[95%] text-xs text-gray-500">Strategic</div>
+            <div className="absolute top-[-20px] left-0 text-xs text-gray-500">Tier 1</div>
+            <div className="absolute top-[-20px] left-[47%] text-xs text-gray-500">Tier 2</div>
+            <div className="absolute top-[-20px] left-[95%] text-xs text-gray-500">Tier 3</div>
             
             {/* Progress fill */}
             <div 
@@ -334,11 +357,16 @@ const EarningsCalculator = () => {
         </div>
       </div>
       
-      <div className="results mt-10 bg-gray-50 rounded-xl p-6">
+      {/* New "Your Estimated Earnings" header */}
+      <h3 className="text-2xl font-bold text-center text-[#00B67A] mt-12 mb-6 font-['Raleway']">
+        Your Estimated Earnings
+      </h3>
+      
+      <div className="results bg-gray-50 rounded-xl p-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="text-center p-4 bg-white rounded-lg shadow-sm border-t-4 border-[#4945FF]">
             <h3 className="text-gray-500 text-sm mb-2 font-['Lato']">Your Tier</h3>
-            <p className="text-xl font-bold text-[#2d1b4d] font-['Raleway']">{tier}</p>
+            <p className="text-xl font-bold text-[#2d1b4d] font-['Raleway']">Tier {tierNumber}: {tier}</p>
           </div>
           <div className="text-center p-4 bg-white rounded-lg shadow-sm border-t-4 border-[#4945FF]">
             <h3 className="text-gray-500 text-sm mb-2 font-['Lato']">Per Referral</h3>
@@ -455,7 +483,7 @@ const EarningsCalculator = () => {
       {/* Tiers Comparison */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-gray-50 p-4 rounded-lg shadow-sm border-l-4 border-[#4945FF]/50">
-          <h4 className="font-bold text-center mb-2 font-['Raleway']">Referral Partner</h4>
+          <h4 className="font-bold text-center mb-2 font-['Raleway']">Tier 1: Referral Partner</h4>
           <div className="flex justify-center items-center gap-1">
             <span className="text-2xl font-bold text-[#4945FF]">5%</span>
             <span className="text-xs text-gray-500">commission</span>
@@ -463,7 +491,7 @@ const EarningsCalculator = () => {
           <p className="text-center text-sm mt-2 font-['Lato']">1-2 Referrals</p>
         </div>
         <div className="bg-gray-50 p-4 rounded-lg shadow-sm border-l-4 border-[#4945FF]/70">
-          <h4 className="font-bold text-center mb-2 font-['Raleway']">Alliance Partner</h4>
+          <h4 className="font-bold text-center mb-2 font-['Raleway']">Tier 2: Alliance Partner</h4>
           <div className="flex justify-center items-center gap-1">
             <span className="text-2xl font-bold text-[#4945FF]">7%</span>
             <span className="text-xs text-gray-500">commission</span>
@@ -471,7 +499,7 @@ const EarningsCalculator = () => {
           <p className="text-center text-sm mt-2 font-['Lato']">3-5 Referrals</p>
         </div>
         <div className="bg-gray-50 p-4 rounded-lg shadow-sm border-l-4 border-[#4945FF]">
-          <h4 className="font-bold text-center mb-2 font-['Raleway']">Strategic Partner</h4>
+          <h4 className="font-bold text-center mb-2 font-['Raleway']">Tier 3: Strategic Partner</h4>
           <div className="flex justify-center items-center gap-1">
             <span className="text-2xl font-bold text-[#4945FF]">10%</span>
             <span className="text-xs text-gray-500">commission</span>
