@@ -14,22 +14,24 @@ function LandingPageB() {
     email: '',
     firstName: '',
     lastName: '',
-    state: '',
-    helpType: ''
+    phone: '',
+    website: '',
+    linkedin: ''
   })
-
-  const [isExpanded, setIsExpanded] = useState(false)
+  
+  const [showForm, setShowForm] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log(formData)
+    setShowForm(false)
   }
 
   const features = [
     {
       icon: "💰",
       title: "Lucrative, Long-Term Earnings",
-      description: "10% recurring commissions for six months on every project you refer. The bigger the project, the more you earn."
+      description: "Earn generous commissions on every project you refer. The bigger the project, the more you earn."
     },
     {
       icon: "🤝",
@@ -105,13 +107,13 @@ function LandingPageB() {
                   </div>
                   
                   <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-['Lato'] font-normal">
-                    Introduce businesses to Buildable's custom software solutions, and earn up to{' '}
+                    Introduce businesses to Buildable's custom software solutions, and earn generous commissions
+                    {' '}
                     <span className="inline-flex items-center font-semibold text-[#4945FF] px-1">
-                      <span className="text-2xl md:text-3xl">10%</span>
-                    </span>{' '}
-                    of monthly invoices for{' '}
-                    <span className="font-semibold text-[#1a1f36]">six months</span>
-                    {' '}— no technical expertise or project management required.
+                      <span className="text-2xl md:text-3xl">on every project</span>
+                    </span>
+                    {' '}
+                    — no technical expertise or project management required.
                   </p>
                   
                   <p className="mt-5 text-lg md:text-xl font-medium text-gray-800 font-['Lato']">
@@ -127,6 +129,7 @@ function LandingPageB() {
                 <Button 
                   size="lg" 
                   className="bg-[#4945FF] hover:bg-[#3835db] active:bg-[#2f2cb6] transition-colors text-white px-8 py-5 text-lg font-medium rounded-md shadow-md hover:shadow-lg transform hover:-translate-y-1 active:translate-y-0 duration-200"
+                  onClick={() => setShowForm(true)}
                 >
                   REQUEST PROGRAM DETAILS
                 </Button>
@@ -152,51 +155,51 @@ function LandingPageB() {
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                      <span className="text-2xl">💰</span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Generous Commission Structure</h4>
-                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Earn up to 10% of monthly invoices for six months</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                      <span className="text-2xl">🎯</span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Zero Technical Requirements</h4>
-                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Just make the introduction, we handle everything else</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                      <span className="text-2xl">📊</span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Transparent Tracking</h4>
-                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Clear reporting on project status and commission calculations</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
                       <span className="text-2xl">👥</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Professional Support</h4>
-                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Dedicated partner manager ensures smooth handoffs</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Dedicated U.S. Based Development & UX Team</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Access our elite software and UX specialists dedicated to supporting your referrals.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                      <span className="text-2xl">🏢</span>
+                      <span className="text-2xl">🧠</span>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Oregon-Based Development</h4>
-                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Clients work directly with our US-based engineering team</p>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Expert Advisory & Consultations</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Enjoy exclusive consultations and discovery sessions with industry-leading experts.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">📰</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Monthly Insights Newsletter</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Stay ahead with tailored market insights and insider strategies delivered monthly.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">💸</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Investor Pitch Opportunities</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Collaborate with us to develop impactful proposals to secure investor funding.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">💰</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Generous Referral Rewards</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Earn lucrative referral commissions or share directly in project revenue.</p>
                     </div>
                   </div>
                 </div>
@@ -245,15 +248,46 @@ function LandingPageB() {
                   </div>
                 </div>
 
-                <div className="mt-auto">
-                  <blockquote className="relative p-6 bg-white/5 rounded-xl border-l-4 border-white/30">
-                    <p className="text-white/90 text-lg italic leading-relaxed mb-4 font-['Lato'] font-normal">
-                      "Buildable's program is a no-brainer. One introduction turned into a $28,000 commission in just three months — the team is professional, and great to work with."
-                    </p>
-                    <footer className="text-white/70 font-['Lato'] font-normal">
-                      – Michael T., Industry Consultant & Buildable Partner Since 2023
-                    </footer>
-                  </blockquote>
+                <div className="mt-auto space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">🏢</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Exclusive Conference Room Access</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Leverage our professional physical meeting spaces for high-impact client interactions.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">💻</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Premium Virtual Meeting Platform</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Use our sophisticated online meeting platform for seamless remote collaborations.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">💸</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Passive Referral Earnings</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Simply connect your network—then effortlessly earn tier-based referral commissions.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
+                      <span className="text-2xl">🌐</span>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white mb-2 font-['Raleway']">Strategic Networking Invitations</h4>
+                      <p className="text-white/80 text-lg font-['Lato'] font-normal">Gain exclusive access to webinars and high-value in-person networking opportunities.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -261,126 +295,7 @@ function LandingPageB() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-24 bg-[#F9F9FB]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-left relative"
-            >
-              <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-green-200 to-transparent"></div>
-              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8 font-['Raleway']">Simple</h3>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-light">3</span>
-                <span className="text-2xl">steps</span>
-                <span className="text-gray-400 ml-2">®</span>
-              </div>
-              <p className="text-gray-600 text-lg font-['Lato'] font-normal">
-                Our streamlined referral process requires minimal effort from partners
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-left relative"
-            >
-              <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-purple-200 to-transparent"></div>
-              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8 font-['Raleway']">Powerful</h3>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-light">$27K</span>
-                <span className="text-gray-400 ml-2">↗</span>
-              </div>
-              <p className="text-gray-600 text-lg font-['Lato'] font-normal">
-                Average commission earned by our top referral partners in 2024
-              </p>
-              <p className="text-gray-600 text-lg font-['Lato'] font-normal mt-4">
-                Our tiered structure rewards active partners, with higher commissions and exclusive benefits for those who consistently bring value.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-left relative"
-            >
-              <div className="absolute -left-4 top-0 h-full w-1 bg-gradient-to-b from-blue-200 to-transparent"></div>
-              <h3 className="text-2xl font-bold text-gray-900 uppercase mb-8 font-['Raleway']">Personal</h3>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-6xl font-light">89</span>
-                <span className="text-2xl">%</span>
-                <span className="text-gray-400 ml-2">☺</span>
-              </div>
-              <p className="text-gray-600 text-lg font-['Lato'] font-normal">
-                Of referral partners have made multiple successful introductions
-              </p>
-              <p className="text-gray-600 text-lg font-['Lato'] font-normal mt-4">
-                Top partners enjoy recognition, exclusive events, and direct access to Buildable leadership.
-              </p>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mt-32 mb-16"
-          >
-            <p className="text-xl text-gray-600 mb-6 font-['Lato'] font-normal">
-              Ready to start earning commissions? Join our partner program today.
-            </p>
-            <a href="#" className="text-blue-600 text-lg font-medium hover:text-blue-700 inline-flex items-center font-['Lato'] font-normal">
-              Learn more about the program
-              <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonial Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="flex gap-12 items-center"
-          >
-            <div className="w-1/3">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-pink-400 to-orange-500 flex items-center justify-center p-8">
-                <img 
-                  src="https://ik.imagekit.io/buildable/AI%20Brand%20Agent%20Profile%20Image%20(4).png?updatedAt=1739872336229" 
-                  alt="Sarah Chen" 
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
-            </div>
-            
-            <div className="w-2/3">
-              <blockquote>
-                <p className="text-3xl font-light text-gray-900 mb-8 leading-relaxed font-['Lato'] font-normal">
-                  "Partnering with Buildable has been a game-changer for my consulting business. Their team handles all the technical delivery while I focus on what I do best - building relationships. The commission structure is generous, and their support team is always there when I need them."
-                </p>
-                <footer>
-                  <div className="flex items-center">
-                    <div>
-                      <div className="text-lg font-semibold text-gray-900 font-['Raleway']">Sarah Chen</div>
-                      <div className="text-gray-600 font-['Lato']">Principal Consultant</div>
-                      <div className="text-gray-600 font-['Lato']">Digital Transformation Partners</div>
-                    </div>
-                  </div>
-                </footer>
-              </blockquote>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+      {/* Your Network, Our Expertise, Shared Success Section */}
       <section className="pb-32 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -443,28 +358,7 @@ function LandingPageB() {
                       </div>
                       <span className="text-2xl text-white/90 font-['Lato'] font-normal">Professional Service Providers</span>
                     </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-2xl">🎙️</span>
-                      </div>
-                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Podcast Hosts</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-2xl">👨‍💼</span>
-                      </div>
-                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Corporate Coaches</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/20 flex items-center justify-center">
-                        <span className="text-2xl">📱</span>
-                      </div>
-                      <span className="text-2xl text-white/90 font-['Lato'] font-normal">Industry Influencers</span>
-                    </li>
                   </ul>
-                  <p className="text-white/80 text-lg font-['Lato'] mt-6">
-                    We welcome unconventional partners who can connect us with unique, high-value opportunities.
-                  </p>
                 </div>
               </div>
               
@@ -472,60 +366,6 @@ function LandingPageB() {
                 <p className="text-2xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto font-['Lato'] font-normal">
                   Don't let valuable opportunities slip away. Partner with Buildable and turn your connections into commissions while ensuring your network gets access to world-class software development services.
                 </p>
-              </div>
-            </div>
-          </div>
-
-          {/* New Section: Building a Community of Advocates */}
-          <div className="py-20 bg-[#F9F9FB] rounded-3xl my-20 max-w-6xl mx-auto">
-            <div className="max-w-5xl mx-auto px-8">
-              <h3 className="text-4xl font-bold text-center text-[#1a1f36] mb-10 font-['Raleway']">
-                Building a Community of Advocates
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <p className="text-xl leading-relaxed text-gray-700 font-['Lato'] font-normal mb-6">
-                    Beyond referrals, we're building a network of advocates who champion Buildable. As a partner, you'll join an exclusive community, gain recognition, and access unique opportunities to grow your influence and earnings.
-                  </p>
-                  
-                  {/* Modern visual element that replaces the old purple box */}
-                  <div className="flex items-center space-x-4 mt-8">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4945FF] to-[#2d1b4d] flex items-center justify-center shadow-md">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="h-2 bg-gradient-to-r from-[#4945FF] to-[#2d1b4d] rounded-full"></div>
-                      <p className="text-[#4945FF] font-semibold mt-2 font-['Lato'] hover:text-[#3835db] cursor-pointer transition-colors">Join our exclusive network today</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  {/* Updated image container with new aspect ratio */}
-                  <div className="rounded-xl overflow-hidden bg-white shadow-lg" style={{ aspectRatio: '4/3' }}>
-                    <div className="relative w-full h-full">
-                      {/* New image with proper error handling */}
-                      <img 
-                        src="https://ik.imagekit.io/buildable/Buildable_Advocates.png?updatedAt=1740600881590" 
-                        alt="Buildable Advocates Network" 
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80";
-                        }}
-                      />
-                      
-                      {/* Updated subtle caption overlay */}
-                      <div className="absolute bottom-4 right-4 bg-white/70 backdrop-blur-sm rounded-lg px-4 py-2 max-w-[60%] border border-[#4945FF]/20 shadow-sm">
-                        <p className="text-[#4945FF] text-sm font-medium font-['Raleway']">
-                          Advocates Drive Growth
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -544,13 +384,100 @@ function LandingPageB() {
               Start earning with Buildable's Partner Program today.
             </h2>
             <div className="flex justify-center">
-              <button className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-['Lato'] font-normal hover:bg-[#4945FF]/90 transition-colors">
+              <button 
+                className="px-8 py-4 bg-[#4945FF] text-white rounded-md text-lg font-['Lato'] font-normal hover:bg-[#4945FF]/90 transition-colors"
+                onClick={() => setShowForm(true)}
+              >
                 Request Program Details
               </button>
             </div>
           </div>
         </motion.div>
       </section>
+
+      {/* Contact Form Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 relative">
+            <button 
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600" 
+              onClick={() => setShowForm(false)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <h3 className="text-2xl font-bold text-center mb-6 font-['Raleway']">Request Program Details</h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                <input 
+                  type="text" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#4945FF] focus:border-[#4945FF]" 
+                  value={formData.firstName}
+                  onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input 
+                  type="email" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#4945FF] focus:border-[#4945FF]" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                <input 
+                  type="tel" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#4945FF] focus:border-[#4945FF]" 
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Website</label>
+                <input 
+                  type="url" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#4945FF] focus:border-[#4945FF]" 
+                  value={formData.website}
+                  onChange={(e) => setFormData({...formData, website: e.target.value})}
+                  required
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">LinkedIn Profile</label>
+                <input 
+                  type="url" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#4945FF] focus:border-[#4945FF]" 
+                  value={formData.linkedin}
+                  onChange={(e) => setFormData({...formData, linkedin: e.target.value})}
+                  required
+                />
+              </div>
+              
+              <div className="pt-4">
+                <button 
+                  type="submit" 
+                  className="w-full px-6 py-3 bg-[#4945FF] text-white font-medium rounded-md hover:bg-[#3835db] transition-colors"
+                >
+                  Submit Request
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="bg-white w-full">
