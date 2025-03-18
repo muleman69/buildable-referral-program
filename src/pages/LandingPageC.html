@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildable Referral Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Base styles */
+        html, body {
+            scroll-behavior: smooth;
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            background-color: white;
+            color: #1a1f36;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+        }
+        
+        h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        header {
+            width: 100%;
+            background-color: white;
+        }
+        
+        header img {
+            width: 100%;
+            max-width: 1800px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0 8rem;
+            position: relative;
+            background-color: white;
+            z-index: 1;
+        }
+        
+        .hero__background {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        
+        .hero__background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+        
+        .hero__background::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .hero__content {
+            max-width: 1024px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        .hero__badge {
+            display: inline-block;
+            background-color: #4945FF;
+            color: white;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        
+        .hero__title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 2.5rem;
+            color: #1a1f36;
+        }
+        
+        @media (min-width: 640px) {
+            .hero__title {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .hero__title {
+                font-size: 3.75rem;
+            }
+        }
+        
+        .hero__divider {
+            height: 1px;
+            width: 4rem;
+            background: linear-gradient(to right, transparent, #a0a0a0, transparent);
+            margin: 0 auto 1.5rem;
+        }
+        
+        .hero__description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #4b5563;
+            margin-bottom: 1.25rem;
+        }
+        
+        @media (min-width: 768px) {
+            .hero__description {
+                font-size: 1.25rem;
+            }
+        }
+        
+        .hero__description-highlight {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            color: #4945FF;
+            padding: 0 0.25rem;
+        }
+        
+        .hero__description-highlight span {
+            font-size: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .hero__description-highlight span {
+                font-size: 1.875rem;
+            }
+        }
+        
+        .hero__subdescription {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .hero__subdescription {
+                font-size: 1.25rem;
+            }
+        }
+        
+        .hero__divider-sm {
+            height: 0.25rem;
+            width: 4rem;
+            background: linear-gradient(to right, transparent, rgba(73, 69, 255, 0.4), transparent);
+            border-radius: 9999px;
+            margin: 1.5rem auto 2.5rem;
+        }
+        
+        .hero__cta {
+            display: inline-block;
+            background-color: #4945FF;
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 500;
+            padding: 1.25rem 2rem;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        
+        .hero__cta:hover {
+            background-color: #3835db;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .hero__cta:active {
+            background-color: #2f2cb6;
+            transform: translateY(0);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+        }
+        
+        .features__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .features__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .feature-card {
+            position: relative;
+            border-radius: 1rem;
+            padding: 2rem;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .feature-card--dark {
+            background: linear-gradient(to bottom right, #1a1f36, #2d3352);
+        }
+        
+        .feature-card--purple {
+            background: linear-gradient(to bottom right, #2d1b4d, #492c7f);
+        }
+        
+        .feature-card__inner {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            height: 100%;
+        }
+        
+        .feature-card__title {
+            font-size: 2.25rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .feature-item__icon {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .feature-item__content {
+            flex: 1;
+        }
+        
+        .feature-item__title {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-item__description {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .how-it-works__step {
+            position: relative;
+            padding-left: 4rem;
+            margin-bottom: 2rem;
+        }
+        
+        .how-it-works__step-number {
+            position: absolute;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        /* Form styles */
+        #contact-form {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+        
+        .form-container {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .form-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #6b7280;
+        }
+        
+        .form-close:hover {
+            color: #1a1f36;
+        }
+        
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1f36;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #4945FF;
+            box-shadow: 0 0 0 3px rgba(73, 69, 255, 0.2);
+        }
+        
+        .form-submit {
+            display: block;
+            width: 100%;
+            background-color: #4945FF;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .form-submit:hover {
+            background-color: #3835db;
+        }
+        
+        .form-submit:active {
+            background-color: #2f2cb6;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 0;
+            background-color: #f9fafb;
+        }
+        
+        .faq__title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1a1f36;
+        }
+        
+        .faq__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .faq__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item__question {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #1a1f36;
+        }
+        
+        .faq-item__answer {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+        
+        /* Ideal Partners Section */
+        .ideal-partners {
+            padding: 5rem 0;
+            background-color: #f3f4f6;
+        }
+        
+        .ideal-partners__container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .ideal-partners__content {
+            background-color: #4945FF;
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .ideal-partners__title {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ideal-partners__description {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .ideal-partners__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .partner-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 3rem 0;
+            background-color: #1a1f36;
+            color: white;
+            text-align: center;
+        }
+        
+        .footer__logo {
+            max-width: 150px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .footer__text {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Utility classes */
+        .mt-16 {
+            margin-top: 4rem;
+        }
+        
+        .mb-10 {
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Simple Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+            <img src="https://ik.imagekit.io/buildable/Buildable_Header.png?updatedAt=1740622781014" alt="Buildable Header">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__background">
+            <img src="https://ik.imagekit.io/buildable/Credit%20Union%20Hero%20Image%20(6).png?updatedAt=1739869859389" alt="Hero Background">
+        </div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="animate-fade-in" style="animation-delay: 0.3s;">
+                    <span class="hero__badge">Buildable Referral Program</span>
+                </div>
+                <h1 class="hero__title animate-fade-in" style="animation-delay: 0.4s;">
+                    Turn Connections into Cash with Buildable's Referral Program
+                </h1>
+                
+                <div class="animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="hero__divider"></div>
+                    
+                    <p class="hero__description">
+                        Introduce businesses to Buildable's custom software solutions, and earn generous commissions
+                        <span class="hero__description-highlight">
+                            <span>on every project</span>
+                        </span>
+                        — no technical expertise or project management required.
+                    </p>
+                    
+                    <p class="hero__subdescription">
+                        Just connect, and we handle the rest.
+                    </p>
+                    
+                    <div class="hero__divider-sm"></div>
+                </div>
+                
+                <div class="animate-fade-in" style="animation-delay: 0.6s;">
+                    <a href="#" class="hero__cta" onclick="showForm(); return false;">
+                        REQUEST PROGRAM DETAILS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features__grid">
+                <!-- The Buildable Advantage -->
+                <div class="feature-card feature-card--dark animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="feature-card__inner">
+                        <h3 class="feature-card__title">The Buildable Advantage</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <span>👥</span>
+                                </div>
+                                <div class="feature-item__content">
+                                    <h4 class="feature-item__title">Dedicated U.S. Based Development & UX Team</h4>
+                                    <p class="feature-item__description">Access our elite software and UX specialists dedicated to supporting your referrals.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <span>🧠</span>
+                                </div>
+                                <div class="feature-item__content">
+                                    <h4 class="feature-item__title">Expert Advisory & Consultations</h4>
+                                    <p class="feature-item__description">Enjoy exclusive consultations and discovery sessions with industry-leading experts.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <span>📰</span>
+                                </div>
+                                <div class="feature-item__content">
+                                    <h4 class="feature-item__title">Monthly Insights Newsletter</h4>
+                                    <p class="feature-item__description">Stay ahead with tailored market insights and insider strategies delivered monthly.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <span>💸</span>
+                                </div>
+                                <div class="feature-item__content">
+                                    <h4 class="feature-item__title">Investor Pitch Opportunities</h4>
+                                    <p class="feature-item__description">Collaborate with us to develop impactful proposals to secure investor funding.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-item__icon">
+                                    <span>💰</span>
+                                </div>
+                                <div class="feature-item__content">
+                                    <h4 class="feature-item__title">Generous Referral Rewards</h4>
+                                    <p class="feature-item__description">Earn lucrative referral commissions or share directly in project revenue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="feature-card feature-card--purple animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="feature-card__inner">
+                        <h3 class="feature-card__title">How It Works</h3>
+                        
+                        <div style="margin-bottom: 3rem;">
+                            <div class="how-it-works__step">
+                                <div class="how-it-works__step-number">1</div>
+                                <div>
+                                    <h4 class="feature-item__title">Partner Registration</h4>
+                                    <p class="feature-item__description">Complete our quick application process</p>
+                                </div>
+                            </div>
+
+                            <div class="how-it-works__step">
+                                <div class="how-it-works__step-number">2</div>
+                                <div>
+                                    <h4 class="feature-item__title">Make Introductions</h4>
+                                    <p class="feature-item__description">Connect us with businesses needing software solutions</p>
+                                </div>
+                            </div>
+
+                            <div class="how-it-works__step">
+                                <div class="how-it-works__step-number">3</div>
+                                <div>
+                                    <h4 class="feature-item__title">Earn Commissions</h4>
+                                    <p class="feature-item__description">Receive payments when projects launch and bills are paid</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: auto;">
+                            <a href="#" class="hero__cta" style="background-color: rgba(255, 255, 255, 0.2); color: white; border: 1px solid rgba(255, 255, 255, 0.4);" onclick="showForm(); return false;">
+                                BECOME A PARTNER
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="faq__title">Frequently Asked Questions</h2>
+            
+            <div class="faq__grid">
+                <div class="faq-item animate-fade-in" style="animation-delay: 0.1s;">
+                    <h3 class="faq-item__question">Who qualifies for the referral program?</h3>
+                    <p class="faq-item__answer">Anyone with connections to businesses that may need custom software solutions. This includes consultants, agency owners, IT professionals, and networkers in various industries.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in" style="animation-delay: 0.2s;">
+                    <h3 class="faq-item__question">How much can I earn?</h3>
+                    <p class="faq-item__answer">Earnings vary based on project size and number of referrals. Submit the form to receive our complete commission structure and potential earnings details.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in" style="animation-delay: 0.3s;">
+                    <h3 class="faq-item__question">How are commissions paid?</h3>
+                    <p class="faq-item__answer">Commissions are paid monthly as project invoices are paid. We provide a transparent dashboard where you can track all your referrals and earnings in real-time.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in" style="animation-delay: 0.4s;">
+                    <h3 class="faq-item__question">What's expected of me as a partner?</h3>
+                    <p class="faq-item__answer">Your primary role is making introductions. We handle all sales, scoping, development, and client management. No technical knowledge is required.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in" style="animation-delay: 0.5s;">
+                    <h3 class="faq-item__question">How long do commissions last?</h3>
+                    <p class="faq-item__question">Contact us for complete details on our commission structure and duration.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in" style="animation-delay: 0.6s;">
+                    <h3 class="faq-item__question">Can I refer multiple businesses?</h3>
+                    <p class="faq-item__answer">Absolutely! The more businesses you refer, the higher your total earnings. Additionally, referring more clients can qualify you for higher commission tiers.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#" class="hero__cta" onclick="showForm(); return false;">
+                    GET COMPLETE PROGRAM DETAILS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal Partners Section -->
+    <section class="ideal-partners">
+        <div class="ideal-partners__container">
+            <div class="ideal-partners__content animate-fade-in" style="animation-delay: 0.2s;">
+                <h2 class="ideal-partners__title">Your Network, Our Expertise, Shared Success</h2>
+                
+                <p class="ideal-partners__description">
+                    Transform your professional connections into a steady revenue stream. Our partner program is designed for networked professionals who want to add value to their relationships while earning significant commissions.
+                </p>
+                
+                <div class="ideal-partners__list">
+                    <span class="partner-tag">Business Consultants</span>
+                    <span class="partner-tag">Agency Owners</span>
+                    <span class="partner-tag">IT Professionals</span>
+                    <span class="partner-tag">Financial Advisors</span>
+                    <span class="partner-tag">Business Coaches</span>
+                    <span class="partner-tag">Industry Influencers</span>
+                    <span class="partner-tag">Startup Mentors</span>
+                    <span class="partner-tag">Professional Networkers</span>
+                </div>
+                
+                <a href="#" class="hero__cta" style="background-color: white; color: #4945FF;" onclick="showForm(); return false;">
+                    JOIN OUR PARTNER PROGRAM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="https://ik.imagekit.io/buildable/Buildable_Logo.png?updatedAt=1740622781014" alt="Buildable Logo" class="footer__logo">
+            <p class="footer__text">
+                © 2023 Buildable. All rights reserved.<br>
+                Buildable is a leading custom software development firm specializing in digital transformation and innovative technical solutions.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Contact Form Popup -->
+    <div id="contact-form">
+        <div class="form-container">
+            <button class="form-close" onclick="hideForm()">&times;</button>
+            <h2 class="form-title">Request Program Details</h2>
+            <form id="referral-form" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="firstName" class="form-label">First Name*</label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name*</label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address*</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="website" class="form-label">Company Website</label>
+                    <input type="url" id="website" name="website" class="form-input" placeholder="https://">
+                </div>
+                
+                <div class="form-group">
+                    <label for="linkedin" class="form-label">LinkedIn Profile</label>
+                    <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Tell us about your network</label>
+                    <textarea id="message" name="message" class="form-input" rows="4" placeholder="Describe the types of businesses in your network and how you might connect them with Buildable..."></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">
+                    SUBMIT REQUEST
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Simple JavaScript for Form Popup -->
+    <script>
+        function showForm() {
+            document.getElementById('contact-form').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideForm() {
+            document.getElementById('contact-form').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Thank you for your interest! We'll be in touch with complete program details soon.");
+            hideForm();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            console.log("Form Data:", data);
+            
+            // In a real implementation, you would send this data to your server
+            // fetch('/api/submit-form', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(data),
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log('Success:', data);
+            // })
+            // .catch((error) => {
+            //     console.error('Error:', error);
+            // });
+            
+            // Reset form
+            event.target.reset();
+        }
+    </script>
+</body>
+</html> 
